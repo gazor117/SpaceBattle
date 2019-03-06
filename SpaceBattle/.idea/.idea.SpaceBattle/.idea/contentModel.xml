@@ -8,8 +8,11 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="Boid.cs" t="Include" />
+          <e p="NoiseWander.cs" t="Include" />
+          <e p="OffsetPursue.cs" t="Include" />
           <e p="PathFollow.cs" t="Include" />
           <e p="PathFollowing.cs" t="Include" />
+          <e p="Pursue.cs" t="Include" />
           <e p="SteeringBehaviour.cs" t="Include" />
         </e>
         <e p="Sketchfab For Unity" t="Include">
