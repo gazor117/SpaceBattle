@@ -4,15 +4,63 @@ using UnityEngine;
 
 public class PathFollow : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+   
+    public List<Vector3> waypoints = new List<Vector3>();
+
+    public int next = 0;
+    public bool looped = true;
+
+    public void OnDrawGizmos()
     {
-        
+        int count = looped ? (transform.childCount + 1) : transform.childCount;        //if looped is true count = childcount +1 if not its = childcount
+        Gizmos.color = Color.cyan;
+        for (int i = 1; i < count; i++)
+        {
+            Transform prev = transform.GetChild(i - 1);
+            Transform next = transform.GetChild(i % transform.childCount);
+            Gizmos.DrawLine(prev.transform.position, next.transform.position);
+            Gizmos.DrawSphere(prev.position, 1);
+            Gizmos.DrawSphere(next.position, 1);
+        }
     }
 
+    // Use this for initialization
+    void Start () {
+        waypoints.Clear();
+        int count = transform.childCount;
+        for (int i = 0; i < count; i++)
+        {
+            waypoints.Add(transform.GetChild(i).position);
+        }
+    }
+	
     // Update is called once per frame
-    void Update()
+    void Update () {
+		
+    }
+
+    public Vector3 NextWaypoint()
     {
-        
+        return waypoints[next];
+    }
+
+    public void AdvanceToNext()
+    {
+        if (looped)
+        {
+            next = (next + 1) % waypoints.Count;
+        }
+        else
+        {
+            if (next != waypoints.Count - 1)
+            {
+                next++;
+            }
+        }
+    }
+
+    public bool IsLast()
+    {
+        return next == waypoints.Count - 1;
     }
 }
