@@ -90,7 +90,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/ShipSpawning.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="408">
@@ -109,20 +109,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/CovenantShipSpawning.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="27" column="73" selection-start-line="26" selection-start-column="7" selection-end-line="27" selection-end-column="73" />
+            <state relative-caret-position="425">
+              <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
               <folding>
-                <marker date="1554818466180" expanded="false" signature="6:78" ph="..." />
-                <marker date="1554818466180" expanded="true" signature="129:2213" ph="{...}" />
-                <marker date="1554818466180" expanded="true" signature="491:754" ph="{...}" />
-                <marker date="1554818466180" expanded="true" signature="797:965" ph="{...}" />
-                <marker date="1554818466180" expanded="true" signature="1024:1503" ph="{...}" />
-                <marker date="1554818466180" expanded="true" signature="1084:1486" ph="{...}" />
-                <marker date="1554818466180" expanded="true" signature="1549:2133" ph="{...}" />
-                <marker date="1554818466180" expanded="true" signature="2190:2211" ph="{...}" />
+                <marker date="1554818500771" expanded="false" signature="6:78" ph="..." />
+                <marker date="1554818500771" expanded="true" signature="129:2147" ph="{...}" />
+                <marker date="1554818500771" expanded="true" signature="491:688" ph="{...}" />
+                <marker date="1554818500771" expanded="true" signature="731:899" ph="{...}" />
+                <marker date="1554818500771" expanded="true" signature="958:1437" ph="{...}" />
+                <marker date="1554818500771" expanded="true" signature="1018:1420" ph="{...}" />
+                <marker date="1554818500771" expanded="true" signature="1483:2067" ph="{...}" />
+                <marker date="1554818500771" expanded="true" signature="2124:2145" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -174,9 +174,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Pursue.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/NoiseWander.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CovenantShipSpawning.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ShipManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ShipSpawning.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CovenantShipSpawning.cs" />
       </list>
     </option>
   </component>
@@ -248,12 +248,12 @@
       <workItem from="1552388400812" duration="138000" />
       <workItem from="1552393754790" duration="623000" />
       <workItem from="1552502689093" duration="593000" />
-      <workItem from="1554813660774" duration="4802000" />
+      <workItem from="1554813660774" duration="5263000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11259000" />
+    <option name="totallyTimeSpent" value="11720000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -414,6 +414,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ShipSpawning.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="53" column="41" selection-start-line="53" selection-start-column="41" selection-end-line="53" selection-end-column="41" />
+          <folding>
+            <marker date="1554818460560" expanded="false" signature="6:78" ph="..." />
+            <marker date="1554818460560" expanded="true" signature="121:2061" ph="{...}" />
+            <marker date="1554818460560" expanded="true" signature="443:611" ph="{...}" />
+            <marker date="1554818460560" expanded="true" signature="637:831" ph="{...}" />
+            <marker date="1554818460560" expanded="true" signature="855:876" ph="{...}" />
+            <marker date="1554818460560" expanded="true" signature="923:1385" ph="{...}" />
+            <marker date="1554818460560" expanded="true" signature="979:1368" ph="{...}" />
+            <marker date="1554818460560" expanded="true" signature="1427:2059" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/ShipManager.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -429,34 +446,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/CovenantShipSpawning.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="27" column="73" selection-start-line="26" selection-start-column="7" selection-end-line="27" selection-end-column="73" />
+        <state relative-caret-position="425">
+          <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
           <folding>
-            <marker date="1554818466180" expanded="false" signature="6:78" ph="..." />
-            <marker date="1554818466180" expanded="true" signature="129:2213" ph="{...}" />
-            <marker date="1554818466180" expanded="true" signature="491:754" ph="{...}" />
-            <marker date="1554818466180" expanded="true" signature="797:965" ph="{...}" />
-            <marker date="1554818466180" expanded="true" signature="1024:1503" ph="{...}" />
-            <marker date="1554818466180" expanded="true" signature="1084:1486" ph="{...}" />
-            <marker date="1554818466180" expanded="true" signature="1549:2133" ph="{...}" />
-            <marker date="1554818466180" expanded="true" signature="2190:2211" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ShipSpawning.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="53" column="41" selection-start-line="53" selection-start-column="41" selection-end-line="53" selection-end-column="41" />
-          <folding>
-            <marker date="1554818460560" expanded="false" signature="6:78" ph="..." />
-            <marker date="1554818460560" expanded="true" signature="121:2061" ph="{...}" />
-            <marker date="1554818460560" expanded="true" signature="443:611" ph="{...}" />
-            <marker date="1554818460560" expanded="true" signature="637:831" ph="{...}" />
-            <marker date="1554818460560" expanded="true" signature="855:876" ph="{...}" />
-            <marker date="1554818460560" expanded="true" signature="923:1385" ph="{...}" />
-            <marker date="1554818460560" expanded="true" signature="979:1368" ph="{...}" />
-            <marker date="1554818460560" expanded="true" signature="1427:2059" ph="{...}" />
+            <marker date="1554818500771" expanded="false" signature="6:78" ph="..." />
+            <marker date="1554818500771" expanded="true" signature="129:2147" ph="{...}" />
+            <marker date="1554818500771" expanded="true" signature="491:688" ph="{...}" />
+            <marker date="1554818500771" expanded="true" signature="731:899" ph="{...}" />
+            <marker date="1554818500771" expanded="true" signature="958:1437" ph="{...}" />
+            <marker date="1554818500771" expanded="true" signature="1018:1420" ph="{...}" />
+            <marker date="1554818500771" expanded="true" signature="1483:2067" ph="{...}" />
+            <marker date="1554818500771" expanded="true" signature="2124:2145" ph="{...}" />
           </folding>
         </state>
       </provider>

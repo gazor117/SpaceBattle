@@ -233,8 +233,8 @@ MonoBehaviour:
   mass: 1
   damping: 0
   banking: 0.474
-  maxSpeed: 10
-  maxForce: 20
+  maxSpeed: 20
+  maxForce: 30
 --- !u!4 &196339350
 Transform:
   m_ObjectHideFlags: 0
@@ -473,13 +473,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f29efdf026ea1a440811cdf88d09e559, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UNSCShipAmount: 10
+  UNSCShipAmount: 100
   UNSCShipprefabs:
   - {fileID: 196339347}
   GameManager: {fileID: 0}
-  SpawnAreaWidth: 100
-  SpawnAreaHeight: 100
-  SpawnAreaDepth: 100
+  SpawnAreaWidth: 200
+  SpawnAreaHeight: 200
+  SpawnAreaDepth: 200
 --- !u!4 &384872831
 Transform:
   m_ObjectHideFlags: 0
@@ -720,8 +720,8 @@ MonoBehaviour:
   mass: 1
   damping: 0.01
   banking: 0.1
-  maxSpeed: 5
-  maxForce: 10
+  maxSpeed: 20
+  maxForce: 25
 --- !u!4 &915752244
 Transform:
   m_ObjectHideFlags: 0
@@ -988,12 +988,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17704b54d2c049342844aef80bf6bd3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CovenantShipAmount: 10
+  CovenantShipAmount: 100
   CVNTShipprefabs:
   - {fileID: 915752241}
-  SpawnAreaWidth: 100
-  SpawnAreaHeight: 100
-  SpawnAreaDepth: 100
+  SpawnAreaWidth: 200
+  SpawnAreaHeight: 200
+  SpawnAreaDepth: 200
   GameManager: {fileID: 0}
 --- !u!4 &1348218145
 Transform:
