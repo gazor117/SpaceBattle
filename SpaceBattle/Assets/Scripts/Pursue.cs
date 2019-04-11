@@ -13,12 +13,14 @@ public class Pursue : SteeringBehaviour
         if (Application.isPlaying)
         {
             Gizmos.color = Color.red;
-            Gizmos.DrawLine(transform.position, targetPos);
+            //Gizmos.DrawLine(transform.position, targetPos);
         }
     }
 
     public override Vector3 Calculate()
     {
+        target = GetComponent<SelectTarget>().target;
+        
         float dist = Vector3.Distance(target.transform.position, transform.position);
         float time = dist / boid.maxSpeed;
 

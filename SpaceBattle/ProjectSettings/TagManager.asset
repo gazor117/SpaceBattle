@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - GM
+  - UNSC
+  - CVNT
+  - UNSCSpawner
+  - CVNTSpawner
   layers:
   - Default
   - TransparentFX

@@ -5,16 +5,19 @@ using UnityEngine;
 public class ShipSpawning : MonoBehaviour
 {
 
-    public int UNSCShipAmount;
+    public int ShipAmount;
    
 
-    private int currentUNSCShips;
+    private int currentShips;
     
 
-    public GameObject[] UNSCShipprefabs;
+    public GameObject[] ShipPrefabs;
     
     public GameObject GameManager;
-    private List<GameObject> UNSCShipRefs;
+    private List<GameObject> ShipRefs;
+
+    [Tooltip("Select if spawning UNSC Ships, leave as false for Covenant")]
+    public bool UNSCShips;
     
 
     
@@ -32,8 +35,25 @@ public class ShipSpawning : MonoBehaviour
     {
         
         GameManager = GameObject.FindGameObjectWithTag("GM");
-        UNSCShipRefs = GameManager.GetComponent<ShipManager>().UNSCShips;
-        StartCoroutine(SpawnUNSC());
+        if (UNSCShips)
+        {
+            ShipRefs = GameManager.GetComponent<ShipManager>().UNSCShips;
+        }
+        else
+        {
+            ShipRefs = GameManager.GetComponent<ShipManager>().CVNTShips;
+        }
+        
+        StartCoroutine(SpawnShips());
+        if (ShipAmount == 0)
+        {
+            Debug.LogError("ShipAmount is set to 0", gameObject);
+        }
+
+        if (ShipPrefabs.Length == 0)
+        {
+            Debug.LogError("No Prefabs selected to be spawned", gameObject);
+        }
     }
 
     
@@ -45,15 +65,15 @@ public class ShipSpawning : MonoBehaviour
 
     
     
-    public IEnumerator SpawnUNSC()
+    public IEnumerator SpawnShips()
     {
-        while (currentUNSCShips < UNSCShipAmount)
+        while (currentShips < ShipAmount)
         {
-            int ran = Random.Range(0, UNSCShipprefabs.Length);
-            GameObject tempUNSCShip = Instantiate(UNSCShipprefabs[ran], RandomPositionInBox(), Quaternion.identity);
-            UNSCShipRefs.Add(tempUNSCShip);
-            tempUNSCShip.transform.SetParent(transform);
-            currentUNSCShips++;
+            int ran = Random.Range(0, ShipPrefabs.Length);
+            GameObject tempShip = Instantiate(ShipPrefabs[ran], RandomPositionInBox(), Quaternion.identity);
+            ShipRefs.Add(tempShip);
+            tempShip.transform.SetParent(transform);
+            currentShips++;
 
 
 
