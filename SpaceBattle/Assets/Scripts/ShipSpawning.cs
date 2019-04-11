@@ -35,14 +35,15 @@ public class ShipSpawning : MonoBehaviour
     {
         
         GameManager = GameObject.FindGameObjectWithTag("GM");
-        if (UNSCShips)
+        ShipRefs = UNSCShips ? GameManager.GetComponent<ShipManager>().UNSCShips : GameManager.GetComponent<ShipManager>().CVNTShips;
+        /*if (UNSCShips)
         {
             ShipRefs = GameManager.GetComponent<ShipManager>().UNSCShips;
         }
         else
         {
             ShipRefs = GameManager.GetComponent<ShipManager>().CVNTShips;
-        }
+        }*/
         
         StartCoroutine(SpawnShips());
         if (ShipAmount == 0)

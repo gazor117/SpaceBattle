@@ -13,7 +13,7 @@ public class Pursue : SteeringBehaviour
         if (Application.isPlaying)
         {
             Gizmos.color = Color.red;
-            //Gizmos.DrawLine(transform.position, targetPos);
+            Gizmos.DrawLine(transform.position, targetPos);
         }
     }
 
