@@ -29,13 +29,21 @@ public class ShipSpawning : MonoBehaviour
         Gizmos.color = new Color(0, 0, 1, 0.2f);
         Gizmos.DrawCube(transform.position, new Vector3(SpawnAreaWidth, SpawnAreaHeight, SpawnAreaDepth));
     }
+
+    void Awake()
+    {
+        GameManager = GameObject.FindGameObjectWithTag("GM");
+        ShipRefs = UNSCShips ? GameManager.GetComponent<ShipManager>().UNSCShips : GameManager.GetComponent<ShipManager>().CVNTShips;
+        StartCoroutine(SpawnShips());
+        
+    }
     
-   
+    
     void Start()
     {
         
-        GameManager = GameObject.FindGameObjectWithTag("GM");
-        ShipRefs = UNSCShips ? GameManager.GetComponent<ShipManager>().UNSCShips : GameManager.GetComponent<ShipManager>().CVNTShips;
+        //GameManager = GameObject.FindGameObjectWithTag("GM");
+       // ShipRefs = UNSCShips ? GameManager.GetComponent<ShipManager>().UNSCShips : GameManager.GetComponent<ShipManager>().CVNTShips;
         /*if (UNSCShips)
         {
             ShipRefs = GameManager.GetComponent<ShipManager>().UNSCShips;
@@ -45,7 +53,7 @@ public class ShipSpawning : MonoBehaviour
             ShipRefs = GameManager.GetComponent<ShipManager>().CVNTShips;
         }*/
         
-        StartCoroutine(SpawnShips());
+       // StartCoroutine(SpawnShips());
         if (ShipAmount == 0)
         {
             Debug.LogError("ShipAmount is set to 0", gameObject);

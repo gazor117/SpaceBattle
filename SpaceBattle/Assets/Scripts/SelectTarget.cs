@@ -14,12 +14,10 @@ public class SelectTarget : MonoBehaviour
 
     public Boid target;
     private bool enemiesSpawned;
-    
-    
-    
-    // Start is called before the first frame update
-    void Start()
+
+    void Awake()
     {
+       
         GM = GameObject.FindWithTag("GM");
         if (gameObject.CompareTag("UNSC"))
         {
@@ -36,8 +34,16 @@ public class SelectTarget : MonoBehaviour
         {
             Debug.LogError("GameObject has no allegiance tag", gameObject);
         }
-        
         StartCoroutine(GetTargetShipDelay());
+    }
+
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+        
+        
 
     }
 
@@ -48,10 +54,11 @@ public class SelectTarget : MonoBehaviour
     }
 
 
-    public GameObject TargetShip()
-    {
+    public GameObject TargetShip()                                            //Gets the last ship added to the enemys array ands it as this ships target
+    {                                                                        // Should change it to add all enemy ships to an array called possibe targets, get a random enemy from that array and remove it from the array.
         int ran = Random.Range(0, EnemyRefs.Count);
         GameObject tempTarget = EnemyRefs[EnemyRefs.Count-1];
+       // Debug.Log(EnemyRefs.Count-1);
         return tempTarget;
 
 

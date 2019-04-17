@@ -24,7 +24,7 @@ public class Pursue : SteeringBehaviour
         float dist = Vector3.Distance(target.transform.position, transform.position);
         float time = dist / boid.maxSpeed;
 
-        targetPos = target.transform.position + (target.velocity * time);
+        targetPos = target.transform.position + target.velocity /* * time*/;                        // Commented 
 
         return boid.SeekForce(targetPos);
     }

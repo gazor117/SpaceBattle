@@ -8,15 +8,20 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="Boid.cs" t="Include" />
+          <e p="Bullet.cs" t="Include" />
           <e p="CovenantShipSpawning.cs" t="Include" />
+          <e p="Flee.cs" t="Include" />
           <e p="NoiseWander.cs" t="Include" />
           <e p="OffsetPursue.cs" t="Include" />
           <e p="PathFollow.cs" t="Include" />
           <e p="PathFollowing.cs" t="Include" />
+          <e p="PelicanController.cs" t="Include" />
           <e p="Pursue.cs" t="Include" />
           <e p="SelectTarget.cs" t="Include" />
           <e p="ShipManager.cs" t="Include" />
           <e p="ShipSpawning.cs" t="Include" />
+          <e p="Shooting.cs" t="Include" />
+          <e p="StateMachine.cs" t="Include" />
           <e p="SteeringBehaviour.cs" t="Include" />
         </e>
         <e p="Sketchfab For Unity" t="Include">
