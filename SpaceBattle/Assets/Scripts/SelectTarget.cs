@@ -56,9 +56,11 @@ public class SelectTarget : MonoBehaviour
 
     public GameObject TargetShip()                                            //Gets the last ship added to the enemys array ands it as this ships target
     {                                                                        // Should change it to add all enemy ships to an array called possibe targets, get a random enemy from that array and remove it from the array.
-        int ran = Random.Range(0, EnemyRefs.Count);
-        GameObject tempTarget = EnemyRefs[EnemyRefs.Count-1];
+        /*int ran = Random.Range(0, EnemyRefs.Count);
+        GameObject tempTarget = EnemyRefs[EnemyRefs.Count-1];*/
        // Debug.Log(EnemyRefs.Count-1);
+        GameObject tempTarget = EnemyRefs[GetComponent<PelicanController>().ShipID];
+        GetComponent<PelicanController>().target = tempTarget;
         return tempTarget;
 
 
@@ -67,10 +69,11 @@ public class SelectTarget : MonoBehaviour
 
     public IEnumerator GetTargetShipDelay()
     {
-        //yield return new WaitForSeconds(Time.deltaTime * 2);
+        yield return new WaitForSeconds(Time.deltaTime);
         target = TargetShip().GetComponent<Boid>();
-        target.GetComponent<SelectTarget>().target = gameObject.GetComponent<Boid>();
-        yield return new WaitForSeconds(Time.deltaTime * 2);
+      
+        //target.GetComponent<SelectTarget>().target = gameObject.GetComponent<Boid>();
+        //yield return new WaitForSeconds(Time.deltaTime * 2);
         //enemiesSpawned = true;
 
     }

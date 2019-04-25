@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-class PursueState : State
+class BansheePursueState : State
 {
     public override void Enter()
     {
@@ -29,7 +29,7 @@ class PursueState : State
 }
 
 
-class FleeState : State
+class BansheeFleeState : State
 {
     public override void Enter()
     {
@@ -55,30 +55,6 @@ class FleeState : State
     
 }
 
-class SelectTargetState : State
-{
-    public override void Enter()
-    {
-        owner.GetComponent<SelectTarget>().enabled = true;
-    }
-
-    public override void Think()
-    {
-        owner.ChangeStateDelayed(new PursueState(), 2 * Time.deltaTime);
-        
-    }
-
-    public override void Exit()
-    {
-        
-        
-    }
-    
-    
-    
-    
-    
-}
 
 
 
@@ -89,16 +65,16 @@ class SelectTargetState : State
 
 
 
-public class PelicanController : MonoBehaviour
+
+public class BansheeController : MonoBehaviour
 {
     public GameObject target;
-    public int ShipID;
     
     // Start is called before the first frame update
     void Start()
     {
-        //target = GetComponent<SelectTarget>().TargetShip();
-        GetComponent<StateMachine>().ChangeState(new SelectTargetState());
+        target = GetComponent<SelectTarget>().TargetShip();
+        GetComponent<StateMachine>().ChangeState(new PursueState());
     }
 
     // Update is called once per frame

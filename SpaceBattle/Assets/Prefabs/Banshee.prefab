@@ -12,6 +12,10 @@ GameObject:
   - component: {fileID: 2287287146866401998}
   - component: {fileID: 2287287146866401999}
   - component: {fileID: 2287287146866401992}
+  - component: {fileID: 65276525576698794}
+  - component: {fileID: 6170868556898569723}
+  - component: {fileID: 5024259924646044910}
+  - component: {fileID: 4127394138973232627}
   m_Layer: 0
   m_Name: Banshee
   m_TagString: CVNT
@@ -87,6 +91,71 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   target: {fileID: 0}
+--- !u!114 &65276525576698794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2287287146866401996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b88c794916939a046a70951127f29538, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  ShipID: 0
+--- !u!114 &6170868556898569723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2287287146866401996}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3c3ba7106fd263448bc2830b0ad9db5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
+  force: {x: 0, y: 0, z: 0}
+  boid: {fileID: 0}
+  targetGameObject: {fileID: 0}
+  target: {x: 0, y: 0, z: 0}
+--- !u!114 &5024259924646044910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2287287146866401996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eebea287fd18f0429bc86f50faf648e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
+  force: {x: 0, y: 0, z: 0}
+  boid: {fileID: 0}
+  frequency: 0.02
+  radius: 34.81
+  theta: 0
+  amplitude: 180
+  distance: 196.72
+  axis: 0
+--- !u!114 &4127394138973232627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2287287146866401996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beffbeaa6943fe341a08389ef7caa259, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updatesPerSecond: 5
 --- !u!1 &2707008265853904404
 GameObject:
   m_ObjectHideFlags: 0
