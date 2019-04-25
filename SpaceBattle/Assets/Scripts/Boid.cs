@@ -40,7 +40,7 @@ public class Boid : MonoBehaviour
         Vector3 desired = target - transform.position;
         desired.Normalize();
         //Debug.Log(desired);
-        Debug.Log(velocity);
+        //Debug.Log(velocity);
         desired *= maxSpeed;
         return desired - velocity;
     }

@@ -83,6 +83,7 @@ public class ShipSpawning : MonoBehaviour
             ShipRefs.Add(tempShip);
             Debug.Log(ShipRefs.Count);
             tempShip.GetComponent<PelicanController>().ShipID = ShipRefs.Count - 1;
+            tempShip.GetComponent<PelicanController>().AggressionLevel = Random.Range(0, 1000);
             tempShip.transform.SetParent(transform);
             currentShips++;
 

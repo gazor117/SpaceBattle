@@ -4,18 +4,8 @@
     <e p="C:\Users\Gary\.Rider2018.2\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\Gary\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_SpaceBattle.456761712.00" t="ExcludeRecursive" />
     <e p="E:\Github Projects\SpaceBattle\SpaceBattle" t="IncludeRecursive">
-      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="SampleScenes" t="Include">
-          <e p="Menu" t="Include">
-            <e p="Scripts" t="Include">
-              <e p="MenuSceneLoader.cs" t="Include" />
-              <e p="PauseMenu.cs" t="Include" />
-              <e p="SceneAndURLLoader.cs" t="Include" />
-            </e>
-          </e>
-        </e>
         <e p="Scripts" t="Include">
           <e p="BansheeController.cs" t="Include" />
           <e p="Boid.cs" t="Include" />
@@ -49,24 +39,6 @@
             <e p="SketchfabExporter.cs" t="Include" />
             <e p="SketchfabImporter.cs" t="Include" />
             <e p="SketchfabPlugin.cs" t="Include" />
-          </e>
-        </e>
-        <e p="Standard Assets" t="Include">
-          <e p="Vehicles" t="Include">
-            <e p="Aircraft" t="Include">
-              <e p="AircraftGuidelines.txt" t="Include" />
-              <e p="Scripts" t="Include">
-                <e p="AeroplaneAiControl.cs" t="Include" />
-                <e p="AeroplaneAudio.cs" t="Include" />
-                <e p="AeroplaneController.cs" t="Include" />
-                <e p="AeroplaneControlSurfaceAnimator.cs" t="Include" />
-                <e p="AeroplanePropellerAnimator.cs" t="Include" />
-                <e p="AeroplaneUserControl2Axis.cs" t="Include" />
-                <e p="AeroplaneUserControl4Axis.cs" t="Include" />
-                <e p="JetParticleEffect.cs" t="Include" />
-                <e p="LandingGear.cs" t="Include" />
-              </e>
-            </e>
           </e>
         </e>
       </e>
