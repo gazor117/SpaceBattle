@@ -28,7 +28,7 @@ public class Shooting : MonoBehaviour
 
     public IEnumerator Shoot()
     {
-        while (true)
+        while (enabled)
         {
             GameObject temp = Instantiate(bulletPrefab, transform.position, gameObject.transform.localRotation);
        

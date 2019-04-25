@@ -63,19 +63,8 @@ public class Boid : MonoBehaviour
     }
 
 
-
-    public Vector3 EvadeForce(Vector3 target)
-    {
-        Vector3 desired = target - transform.position;
-        desired.Normalize();
-        
-        //Debug.Log(desired);
-        Debug.Log(velocity);
-        desired *= maxSpeed;
-        return desired - velocity;
-        
-        
-    }
+    
+    
     Vector3 Calculate()
     {
         force = Vector3.zero;

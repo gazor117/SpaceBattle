@@ -81,7 +81,7 @@ public class ShipSpawning : MonoBehaviour
             int ran = Random.Range(0, ShipPrefabs.Length);
             GameObject tempShip = Instantiate(ShipPrefabs[ran], RandomPositionInBox(), Quaternion.identity);
             ShipRefs.Add(tempShip);
-            Debug.Log(ShipRefs.Count);
+//            Debug.Log(ShipRefs.Count);
             tempShip.GetComponent<PelicanController>().ShipID = ShipRefs.Count - 1;
             tempShip.GetComponent<PelicanController>().AggressionLevel = Random.Range(0, 1000);
             tempShip.transform.SetParent(transform);
