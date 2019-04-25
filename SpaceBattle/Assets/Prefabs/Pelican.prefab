@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 9067207554119265929}
   - component: {fileID: 9067207554119265930}
   - component: {fileID: 9067207554119265928}
+  - component: {fileID: 8638288564837763099}
   - component: {fileID: 9067207554119265927}
   - component: {fileID: 2910360738133211671}
-  - component: {fileID: 8638288564837763099}
   - component: {fileID: 5030679383135898819}
   - component: {fileID: 2661669940958912688}
   - component: {fileID: 7522780259486040740}
@@ -73,6 +73,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   target: {fileID: 0}
+--- !u!114 &8638288564837763099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9067207554119265932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b88c794916939a046a70951127f29538, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  ShipID: 0
+  AggressionLevel: 0
+  startDecelerate: 300
+  stopDecelerate: 15
+  decelerationSpeed: 50
+  startMaxSpeed: 0
 --- !u!114 &9067207554119265927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,25 +125,6 @@ MonoBehaviour:
   boid: {fileID: 0}
   targetGameObject: {fileID: 0}
   target: {x: 0, y: 0, z: 0}
---- !u!114 &8638288564837763099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9067207554119265932}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b88c794916939a046a70951127f29538, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  ShipID: 0
-  AggressionLevel: 0
-  startDecelerate: 300
-  stopDecelerate: 15
-  decelerationSpeed: 50
-  startMaxSpeed: 0
 --- !u!114 &5030679383135898819
 MonoBehaviour:
   m_ObjectHideFlags: 0

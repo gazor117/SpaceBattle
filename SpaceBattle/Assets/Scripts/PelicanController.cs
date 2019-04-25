@@ -93,7 +93,7 @@ class PursueState : State
         /*owner.GetComponent<Boid>().maxSpeed -= PC.DecelerateForce(tempTarget.transform.position, startDecelerate, stopDecelerate, decelerationSpeed);
         Debug.Log(PC.DecelerateForce(tempTarget.transform.position, startDecelerate,
             stopDecelerate, decelerationSpeed) + "Deceleration Force");*/
-        Debug.Log("Distance"+Vector3.Distance(owner.transform.position, tempTarget.transform.position));
+//        Debug.Log("Distance"+Vector3.Distance(owner.transform.position, tempTarget.transform.position));
         if (owner.GetComponent<Boid>().maxSpeed < thisMaxSpeed + 20 &&
             Vector3.Distance(owner.transform.position, tempTarget.transform.position) > startDecelerate)
         {
@@ -187,7 +187,7 @@ class SelectTargetState : State
 
     public override void Think()
     {
-        owner.ChangeStateDelayed(new PursueState(), 2 * Time.deltaTime);
+        owner.ChangeState(new PursueState());
         
     }
 
@@ -216,14 +216,17 @@ public class PelicanController : MonoBehaviour
     public float startDecelerate;
     public float stopDecelerate;
     public float decelerationSpeed;
+    [SerializeField]
     public float startMaxSpeed;
     
     // Start is called before the first frame update
     void Start()
     {
         //target = GetComponent<SelectTarget>().TargetShip();
-        GetComponent<StateMachine>().ChangeState(new SelectTargetState());
+        GetComponent<StateMachine>().ChangeStateDelayed(new SelectTargetState(), 1f);
         startMaxSpeed = GetComponent<Boid>().maxSpeed;
+        GetComponent<Pursue>().enabled = false;
+        
     }
 
     // Update is called once per frame
