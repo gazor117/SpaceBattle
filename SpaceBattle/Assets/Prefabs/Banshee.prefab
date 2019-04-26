@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6170868556898569723}
   - component: {fileID: 5024259924646044910}
   - component: {fileID: 4127394138973232627}
+  - component: {fileID: 4813315473302032211}
   - component: {fileID: 2026222114544584078}
   m_Layer: 0
   m_Name: Banshee
@@ -162,6 +163,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   updatesPerSecond: 5
+--- !u!114 &4813315473302032211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2287287146866401996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 575f10606e2f9484fab051205ae6b854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
+  force: {x: 0, y: 0, z: 0}
+  boid: {fileID: 0}
+  pursuer: {fileID: 0}
 --- !u!114 &2026222114544584078
 MonoBehaviour:
   m_ObjectHideFlags: 0

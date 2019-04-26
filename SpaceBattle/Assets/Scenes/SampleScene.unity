@@ -282,7 +282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f29efdf026ea1a440811cdf88d09e559, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShipAmount: 40
+  ShipAmount: 1
   ShipPrefabs:
   - {fileID: 9067207554119265932, guid: e20c5ec490c0af247b7a768961d79c95, type: 3}
   GameManager: {fileID: 0}
@@ -653,7 +653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f29efdf026ea1a440811cdf88d09e559, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShipAmount: 40
+  ShipAmount: 1
   ShipPrefabs:
   - {fileID: 2287287146866401996, guid: baec74e9c269e4c459bcbcfe7c192680, type: 3}
   GameManager: {fileID: 0}

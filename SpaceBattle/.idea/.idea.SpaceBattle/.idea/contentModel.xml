@@ -20,6 +20,7 @@
           <e p="Boid.cs" t="Include" />
           <e p="Bullet.cs" t="Include" />
           <e p="CovenantShipSpawning.cs" t="Include" />
+          <e p="Evade.cs" t="Include" />
           <e p="Flee.cs" t="Include" />
           <e p="NoiseWander.cs" t="Include" />
           <e p="OffsetPursue.cs" t="Include" />

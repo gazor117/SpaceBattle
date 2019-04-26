@@ -135,7 +135,8 @@ class FleeState : State
     
     public override void Enter()
     {
-        owner.GetComponent<Flee>().enabled = true;
+        //owner.GetComponent<Flee>().enabled = true;
+        owner.GetComponent<Evade>().enabled = true;
         owner.GetComponent<NoiseWander>().enabled = true;
         thisMaxSpeed = owner.GetComponent<Boid>().maxSpeed;
         
@@ -173,7 +174,8 @@ class FleeState : State
 
     public override void Exit()
     {
-        owner.GetComponent<Flee>().enabled = false;
+        //owner.GetComponent<Flee>().enabled = false;
+        owner.GetComponent<Evade>().enabled = false;
         owner.GetComponent<NoiseWander>().enabled = false;
     }
 }
@@ -226,7 +228,9 @@ public class PelicanController : MonoBehaviour
         GetComponent<StateMachine>().ChangeStateDelayed(new SelectTargetState(), 1f);
         startMaxSpeed = GetComponent<Boid>().maxSpeed;
         GetComponent<Pursue>().enabled = false;
+        GetComponent<Evade>().enabled = false;
         
+
     }
 
     // Update is called once per frame
