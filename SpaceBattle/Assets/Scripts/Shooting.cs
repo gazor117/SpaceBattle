@@ -6,6 +6,8 @@ public class Shooting : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public float bulletDelay;
+    public GameObject gunBarrel;
+    
 
     //public GameObject enemy;
     // Start is called before the first frame update
@@ -30,8 +32,9 @@ public class Shooting : MonoBehaviour
     {
         while (enabled)
         {
-            GameObject temp = Instantiate(bulletPrefab, transform.position, gameObject.transform.localRotation);
-       
+            GameObject temp = Instantiate(bulletPrefab, gunBarrel.transform.position, gameObject.transform.localRotation);
+            temp.tag = (gameObject.tag + "bullet");
+            Debug.Log(temp.tag);
             yield return new WaitForSeconds(bulletDelay);
         }
        

@@ -135,8 +135,8 @@ class FleeState : State
     
     public override void Enter()
     {
-        //owner.GetComponent<Flee>().enabled = true;
-        owner.GetComponent<Evade>().enabled = true;
+        owner.GetComponent<Flee>().enabled = true;
+        //owner.GetComponent<Evade>().enabled = true;
         owner.GetComponent<NoiseWander>().enabled = true;
         thisMaxSpeed = owner.GetComponent<Boid>().maxSpeed;
         
@@ -174,8 +174,8 @@ class FleeState : State
 
     public override void Exit()
     {
-        //owner.GetComponent<Flee>().enabled = false;
-        owner.GetComponent<Evade>().enabled = false;
+        owner.GetComponent<Flee>().enabled = false;
+        //owner.GetComponent<Evade>().enabled = false;
         owner.GetComponent<NoiseWander>().enabled = false;
     }
 }
@@ -218,8 +218,9 @@ public class PelicanController : MonoBehaviour
     public float startDecelerate;
     public float stopDecelerate;
     public float decelerationSpeed;
-    [SerializeField]
     public float startMaxSpeed;
+    public int health;
+    public string enemyTag;
     
     // Start is called before the first frame update
     void Start()
@@ -260,5 +261,13 @@ public class PelicanController : MonoBehaviour
         return desired;
 
 
+    }
+
+    private void OnTriggerEnter(Collider col)
+    {
+        if (col.CompareTag(enemyTag + "bullet"))
+        {
+            health -= 20;
+        }
     }
 }

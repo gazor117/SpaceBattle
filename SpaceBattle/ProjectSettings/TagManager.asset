@@ -9,6 +9,9 @@ TagManager:
   - CVNT
   - UNSCSpawner
   - CVNTSpawner
+  - bullet
+  - CVNTbullet
+  - UNSCbullet
   layers:
   - Default
   - TransparentFX
