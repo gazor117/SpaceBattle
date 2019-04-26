@@ -193,6 +193,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d42b50940dfb9cc4082759284ed2b405, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &209986880
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 209986881}
+  m_Layer: 0
+  m_Name: Covenant Cruiser
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &209986881
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 209986880}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 91, y: 33, z: 23.168396}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1355387893}
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &269402142
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,7 +313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f29efdf026ea1a440811cdf88d09e559, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShipAmount: 40
+  ShipAmount: 1
   ShipPrefabs:
   - {fileID: 9067207554119265932, guid: e20c5ec490c0af247b7a768961d79c95, type: 3}
   GameManager: {fileID: 0}
@@ -545,7 +576,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 209986881}
     m_Modifications:
     - target: {fileID: 6195211829801163918, guid: ab0ab8030ebc45d429c921976c7706bb,
         type: 3}
@@ -555,32 +586,32 @@ PrefabInstance:
     - target: {fileID: 6501479406416034457, guid: ab0ab8030ebc45d429c921976c7706bb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 126.04
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6501479406416034457, guid: ab0ab8030ebc45d429c921976c7706bb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -29.383
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6501479406416034457, guid: ab0ab8030ebc45d429c921976c7706bb,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 19.354
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6501479406416034457, guid: ab0ab8030ebc45d429c921976c7706bb,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6501479406416034457, guid: ab0ab8030ebc45d429c921976c7706bb,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6501479406416034457, guid: ab0ab8030ebc45d429c921976c7706bb,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6501479406416034457, guid: ab0ab8030ebc45d429c921976c7706bb,
         type: 3}
@@ -590,7 +621,7 @@ PrefabInstance:
     - target: {fileID: 6501479406416034457, guid: ab0ab8030ebc45d429c921976c7706bb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6501479406416034457, guid: ab0ab8030ebc45d429c921976c7706bb,
         type: 3}
@@ -653,7 +684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f29efdf026ea1a440811cdf88d09e559, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShipAmount: 40
+  ShipAmount: 1
   ShipPrefabs:
   - {fileID: 2287287146866401996, guid: baec74e9c269e4c459bcbcfe7c192680, type: 3}
   GameManager: {fileID: 0}
@@ -675,6 +706,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1355387893 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6501479406416034457, guid: ab0ab8030ebc45d429c921976c7706bb,
+    type: 3}
+  m_PrefabInstance: {fileID: 984879594}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1498268046
 GameObject:
   m_ObjectHideFlags: 0
