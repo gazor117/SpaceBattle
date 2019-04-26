@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 3015292435627142218}
   - component: {fileID: 5030679383135898819}
   - component: {fileID: 2661669940958912688}
+  - component: {fileID: 2933555485442838463}
   - component: {fileID: 7522780259486040740}
   - component: {fileID: 6199335120094825882}
   m_Layer: 0
@@ -210,6 +211,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   updatesPerSecond: 5
+--- !u!114 &2933555485442838463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9067207554119265932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fa5d8fa815cac84a8cce811c375fafe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
+  force: {x: 0, y: 0, z: 0}
+  boid: {fileID: 0}
+  scale: 4
+  forwardFeelerDepth: 30
+  sideFeelerDepth: 15
+  frontFeelerUpdatesPerSecond: 10
+  sideFeelerUpdatesPerSecond: 5
+  feelerRadius: 2
+  forceType: 0
+  mask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!114 &7522780259486040740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,7 +250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 2104643449752155664, guid: f18729ba0787d254d91e15f82a2d82de,
     type: 3}
-  bulletDelay: 2
+  bulletDelay: 0.3
   gunBarrel: {fileID: 2030459812989264009}
 --- !u!136 &6199335120094825882
 CapsuleCollider:

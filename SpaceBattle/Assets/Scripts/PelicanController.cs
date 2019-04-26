@@ -24,8 +24,7 @@ class PursueState : State
         
         PC = owner.GetComponent<PelicanController>();
         tempTarget = PC.target;
-        thisShip = owner.transform.position;
-        enemyShip = tempTarget.transform.position;
+        
         
         startDecelerate = PC.startDecelerate;
         stopDecelerate = PC.stopDecelerate;
@@ -34,7 +33,8 @@ class PursueState : State
 
     public override void Think()
     {
-        
+        thisShip = owner.transform.position;
+        enemyShip = tempTarget.transform.position;
         //int ran = Random.Range(0, 10);
         //PelicanController PC = owner.GetComponent<PelicanController>();
         //GameObject tempTarget = PC.target;
@@ -43,7 +43,7 @@ class PursueState : State
 
         bool enemyInFront;
         if (Vector3.Distance(tempTarget.transform.position,
-                owner.transform.position) < 100 )
+                owner.transform.position) < 500 )
         {
             
            //Debug.LogError("IN IF STATEMENT");
@@ -51,12 +51,12 @@ class PursueState : State
             {
                 owner.ChangeState(new FleeState());
             }
-
-            Vector3 directionToEnemy = enemyShip - thisShip;
-
+            
+            Vector3 directionToEnemy = (enemyShip - thisShip).normalized;
+            
             float dotProduct = Vector3.Dot(directionToEnemy, owner.transform.forward);
             enemyInFront = dotProduct > 0 ? true : false;
-            //Debug.Log(enemyInFront + owner.tag);
+            //Debug.Log(dotProduct + owner.tag);
             if (enemyInFront)
             {
                 owner.GetComponent<Shooting>().enabled = true;
@@ -142,8 +142,7 @@ class FleeState : State
         
         PC = owner.GetComponent<PelicanController>();
         tempTarget = PC.target;
-        thisShip = owner.transform.position;
-        enemyShip = tempTarget.transform.position;
+        
         
         startDecelerate = PC.startDecelerate;
         stopDecelerate = PC.stopDecelerate;
@@ -152,11 +151,13 @@ class FleeState : State
 
     public override void Think()
     {
-        Vector3 directionToEnemy = enemyShip - thisShip;
+        thisShip = owner.transform.position;
+        enemyShip = tempTarget.transform.position;
+        Vector3 directionToEnemy = (enemyShip - thisShip).normalized;
         bool enemyInFront;
         float dotProduct = Vector3.Dot(directionToEnemy, owner.transform.forward);
         enemyInFront = dotProduct > 0 ? true : false;
-//        Debug.Log(enemyInFront);
+        Debug.Log(owner.gameObject.tag + dotProduct);
         if (enemyInFront)
         {
             owner.GetComponent<Shooting>().enabled = true;
