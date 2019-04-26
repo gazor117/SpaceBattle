@@ -36,7 +36,7 @@ Transform:
   m_GameObject: {fileID: 2287287146866401996}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -112.14, y: 1.4436438, z: -1.38}
-  m_LocalScale: {x: 2.0739, y: 2.0739, z: 2.0739}
+  m_LocalScale: {x: 3.0708237, y: 3.0708237, z: 3.0708237}
   m_Children:
   - {fileID: 5194498273476305629}
   - {fileID: 7443751847048312189}
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   EnemyRefs: []
-  target: {fileID: 0}
+  targetBoid: {fileID: 0}
   EnemyDist: []
 --- !u!114 &65276525576698794
 MonoBehaviour:
@@ -117,7 +117,7 @@ MonoBehaviour:
   stopDecelerate: 15
   decelerationSpeed: 50
   startMaxSpeed: 0
-  health: 20
+  health: 100
   enemyTag: UNSC
   explosionEffect: {fileID: 4396141350686427710, guid: 7e3402f1332addc4a8d4460e073d5a0c,
     type: 3}
@@ -336,7 +336,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5685689731862928261}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.504, z: 1.301}
+  m_LocalPosition: {x: 0, y: 0.93, z: 1.301}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2287287146866401993}

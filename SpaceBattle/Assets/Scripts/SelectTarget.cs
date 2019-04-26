@@ -72,11 +72,11 @@ public class SelectTarget : MonoBehaviour
 
     public GameObject GetNewTarget()
     {
-        Debug.Log("Ran Function");
+//        Debug.Log("Ran Function");
         GameObject tempTarget = null;
         for (int i = 0; i < EnemyRefs.Count; i++)
         {
-            Debug.Log("First FOR LOOP");
+//            Debug.Log("First FOR LOOP");
             EnemyDist.Add(Vector3.Distance(transform.position, EnemyRefs[i].transform.position));
             
         }
@@ -85,7 +85,7 @@ public class SelectTarget : MonoBehaviour
         {
             if (Mathf.RoundToInt(EnemyDist.Min()) == Mathf.RoundToInt(Vector3.Distance(transform.position, EnemyRefs[i].transform.position)))
             {
-                Debug.Log("Second FOR LOOP");
+//                Debug.Log("Second FOR LOOP");
 
                 tempTarget = EnemyRefs[i];
                

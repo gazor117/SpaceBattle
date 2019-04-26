@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2030459812989264009}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -5, z: 36.1}
+  m_LocalPosition: {x: 0, y: -3.82, z: 35.87}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9067207554119265929}
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 0
   EnemyRefs: []
-  target: {fileID: 0}
+  targetBoid: {fileID: 0}
   EnemyDist: []
 --- !u!114 &8638288564837763099
 MonoBehaviour:
@@ -128,7 +128,7 @@ MonoBehaviour:
   stopDecelerate: 15
   decelerationSpeed: 50
   startMaxSpeed: 0
-  health: 20
+  health: 100
   enemyTag: CVNT
   explosionEffect: {fileID: 4396141350686427710, guid: 7e3402f1332addc4a8d4460e073d5a0c,
     type: 3}
