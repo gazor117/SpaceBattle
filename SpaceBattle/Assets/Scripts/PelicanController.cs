@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Numerics;
 using UnityEngine;
+using Quaternion = UnityEngine.Quaternion;
 using Vector3 = UnityEngine.Vector3;
 
 class PursueState : State
@@ -222,6 +223,7 @@ public class PelicanController : MonoBehaviour
     public float startMaxSpeed;
     public int health;
     public string enemyTag;
+    public GameObject explosionEffect;
     
     // Start is called before the first frame update
     void Start()
@@ -269,6 +271,20 @@ public class PelicanController : MonoBehaviour
         if (col.CompareTag(enemyTag + "bullet"))
         {
             health -= 20;
+            HealthCheck();
+        }
+    }
+
+    private void HealthCheck()
+    {
+        if (health <= 0)
+        {
+            //EXPLOSION EFFECT
+            Instantiate(explosionEffect, transform.position, Quaternion.identity);
+            //PARTS PROJECTED IN RANDOM DIRECTIONS
+            //DELETE FROM ARRAY
+            Destroy(gameObject);
+            //DESTROY GAMEOBEJCT
         }
     }
 }

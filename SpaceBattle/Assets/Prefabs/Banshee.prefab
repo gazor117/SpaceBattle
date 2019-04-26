@@ -115,8 +115,10 @@ MonoBehaviour:
   stopDecelerate: 15
   decelerationSpeed: 50
   startMaxSpeed: 0
-  health: 0
+  health: 100
   enemyTag: UNSC
+  explosionEffect: {fileID: 4396141350686427710, guid: 7e3402f1332addc4a8d4460e073d5a0c,
+    type: 3}
 --- !u!114 &6170868556898569723
 MonoBehaviour:
   m_ObjectHideFlags: 0
