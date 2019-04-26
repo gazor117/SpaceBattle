@@ -24,7 +24,7 @@ class PursueState : State
         thisMaxSpeed = owner.GetComponent<Boid>().maxSpeed;
         
         PC = owner.GetComponent<PelicanController>();
-        tempTarget = PC.target;
+        
         
         
         startDecelerate = PC.startDecelerate;
@@ -34,6 +34,7 @@ class PursueState : State
 
     public override void Think()
     {
+        tempTarget = PC.target;
         thisShip = owner.transform.position;
         enemyShip = tempTarget.transform.position;
         //int ran = Random.Range(0, 10);
@@ -158,7 +159,7 @@ class FleeState : State
         bool enemyInFront;
         float dotProduct = Vector3.Dot(directionToEnemy, owner.transform.forward);
         enemyInFront = dotProduct > 0 ? true : false;
-        Debug.Log(owner.gameObject.tag + dotProduct);
+//        Debug.Log(owner.gameObject.tag + dotProduct);
         if (enemyInFront)
         {
             owner.GetComponent<Shooting>().enabled = true;
@@ -224,6 +225,9 @@ public class PelicanController : MonoBehaviour
     public int health;
     public string enemyTag;
     public GameObject explosionEffect;
+    private GameObject GM;
+    private List<GameObject> EnemyRefs;
+    private bool targetAlive = true;
     
     // Start is called before the first frame update
     void Start()
@@ -233,6 +237,7 @@ public class PelicanController : MonoBehaviour
         startMaxSpeed = GetComponent<Boid>().maxSpeed;
         GetComponent<Pursue>().enabled = false;
         GetComponent<Evade>().enabled = false;
+        GM =   GM = GameObject.FindWithTag("GM");
         
 
     }
@@ -240,6 +245,13 @@ public class PelicanController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (target == null)
+        {
+            target = GetComponent<SelectTarget>().GetNewTarget();
+            GetComponent<SelectTarget>().targetBoid = target.GetComponent<Boid>();
+            GetComponent<StateMachine>().ChangeState(new PursueState());
+        }
+        
         
     }
     
@@ -279,10 +291,23 @@ public class PelicanController : MonoBehaviour
     {
         if (health <= 0)
         {
+            
             //EXPLOSION EFFECT
             Instantiate(explosionEffect, transform.position, Quaternion.identity);
             //PARTS PROJECTED IN RANDOM DIRECTIONS
-            //DELETE FROM ARRAY
+            //DELETE FROM ARRAy
+            if (gameObject.tag == "CVNT")
+            {
+                EnemyRefs = GM.GetComponent<ShipManager>().CVNTShips;
+            }
+            else
+            {
+                EnemyRefs = GM.GetComponent<ShipManager>().UNSCShips;
+            }
+
+            target.GetComponent<PelicanController>().targetAlive = false;
+            //target.GetComponent<PelicanController>().target = target.GetComponent<SelectTarget>().GetNewTarget();
+            EnemyRefs.Remove(gameObject);
             Destroy(gameObject);
             //DESTROY GAMEOBEJCT
         }

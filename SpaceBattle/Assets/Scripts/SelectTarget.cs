@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class SelectTarget : MonoBehaviour
 {
@@ -10,10 +12,12 @@ public class SelectTarget : MonoBehaviour
     [Tooltip("ShipAllegianceTag is the tag on this ships spawner object")]
     //public string ShipAllegianceTag;
 
-    private List<GameObject> EnemyRefs;
+    public List<GameObject> EnemyRefs;
 
-    public Boid target;
+    [FormerlySerializedAs("target")] public Boid targetBoid;
     private bool enemiesSpawned;
+
+    public List<float> EnemyDist = new List<float>();
 
     void Awake()
     {
@@ -61,16 +65,46 @@ public class SelectTarget : MonoBehaviour
        // Debug.Log(EnemyRefs.Count-1);
         GameObject tempTarget = EnemyRefs[GetComponent<PelicanController>().ShipID];
         GetComponent<PelicanController>().target = tempTarget;
+        
         return tempTarget;
-
-
-
     }
 
+
+    public GameObject GetNewTarget()
+    {
+        Debug.Log("Ran Function");
+        GameObject tempTarget = null;
+        for (int i = 0; i < EnemyRefs.Count; i++)
+        {
+            Debug.Log("First FOR LOOP");
+            EnemyDist.Add(Vector3.Distance(transform.position, EnemyRefs[i].transform.position));
+            
+        }
+
+        for (int i = 0; i < EnemyRefs.Count; i++)
+        {
+            if (Mathf.RoundToInt(EnemyDist.Min()) == Mathf.RoundToInt(Vector3.Distance(transform.position, EnemyRefs[i].transform.position)))
+            {
+                Debug.Log("Second FOR LOOP");
+
+                tempTarget = EnemyRefs[i];
+               
+            }
+        }
+
+        if (tempTarget.GetComponent<Boid>().enabled == false)
+        {
+            GetNewTarget();
+        }
+        targetBoid = tempTarget.GetComponent<Boid>();
+        EnemyDist.Clear();
+        return tempTarget;
+    }
+    
     public IEnumerator GetTargetShipDelay()
     {
         yield return new WaitForSeconds(Time.deltaTime);
-        target = TargetShip().GetComponent<Boid>();
+        targetBoid = TargetShip().GetComponent<Boid>();
       
         //target.GetComponent<SelectTarget>().target = gameObject.GetComponent<Boid>();
         //yield return new WaitForSeconds(Time.deltaTime * 2);

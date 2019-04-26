@@ -20,7 +20,7 @@ public class Evade : SteeringBehaviour
 
     public override Vector3 Calculate()
     {
-        pursuer = GetComponent<SelectTarget>().target;
+        pursuer = GetComponent<SelectTarget>().targetBoid;
 
         float dist = Vector3.Distance(pursuer.transform.position, transform.position);
         float time = dist / boid.maxSpeed;

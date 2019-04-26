@@ -106,7 +106,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 0
+  EnemyRefs: []
   target: {fileID: 0}
+  EnemyDist: []
 --- !u!114 &8638288564837763099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,7 +128,7 @@ MonoBehaviour:
   stopDecelerate: 15
   decelerationSpeed: 50
   startMaxSpeed: 0
-  health: 100
+  health: 20
   enemyTag: CVNT
   explosionEffect: {fileID: 4396141350686427710, guid: 7e3402f1332addc4a8d4460e073d5a0c,
     type: 3}

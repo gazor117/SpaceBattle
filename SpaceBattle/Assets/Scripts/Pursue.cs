@@ -19,7 +19,7 @@ public class Pursue : SteeringBehaviour
 
     public override Vector3 Calculate()
     {
-        target = GetComponent<SelectTarget>().target;
+        target = GetComponent<SelectTarget>().targetBoid;
         
         float dist = Vector3.Distance(target.transform.position, transform.position);
         float time = dist / boid.maxSpeed;
