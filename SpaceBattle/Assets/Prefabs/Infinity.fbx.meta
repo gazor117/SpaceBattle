@@ -1,0 +1,147 @@
+fileFormatVersion: 2
+guid: df0a2bfb80984db4f956f9bdc4f9c951
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: b_root
+    100002: greeble_back_default
+    100004: greeble_bot_default
+    100006: greeble_front_default
+    100008: greeble_left_default
+    100010: greeble_right_default
+    100012: hull_default
+    100014: //RootNode
+    100016: Skin
+    100018: Skin_2
+    100020: Skin_3
+    100022: Skin_4
+    100024: Skin_5
+    100026: Skin_6
+    400000: b_root
+    400002: greeble_back_default
+    400004: greeble_bot_default
+    400006: greeble_front_default
+    400008: greeble_left_default
+    400010: greeble_right_default
+    400012: hull_default
+    400014: //RootNode
+    400016: Skin
+    400018: Skin_2
+    400020: Skin_3
+    400022: Skin_4
+    400024: Skin_5
+    400026: Skin_6
+    2100000: storm_infinity_nurnies_default
+    2100002: storm_infinity_antenna_constant_default
+    2100004: storm_infinity_nurnies_default.1
+    2100006: storm_infinity_tech_panel_default
+    2100008: storm_infinity_nurnies_default.2
+    2100010: storm_infinity_tech_panel_default.1
+    2100012: storm_infinity_nurnies_default.3
+    2100014: storm_infinity_tech_panel_default.2
+    2100016: storm_infinity_nurnies_default.4
+    2100018: storm_infinity_tech_panel_default.3
+    2100020: storm_infinity_forerunner_constant_default
+    2100022: storm_infinity_interior_light_panels_default
+    2100024: storm_infinity_logo_default
+    2100026: storm_infinity_nurnies_default.5
+    2100028: storm_infinity_tech_panel_default.4
+    4300000: greeble_back_default
+    4300002: greeble_bot_default
+    4300004: greeble_front_default
+    4300006: greeble_left_default
+    4300008: greeble_right_default
+    4300010: hull_default
+    9500000: //RootNode
+    13700000: greeble_back_default
+    13700002: greeble_bot_default
+    13700004: greeble_front_default
+    13700006: greeble_left_default
+    13700008: greeble_right_default
+    13700010: hull_default
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.0254
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

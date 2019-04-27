@@ -1,0 +1,182 @@
+fileFormatVersion: 2
+guid: 68098ab21f134014698e50c090071d7a
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b000000
+  assetHash:
+    serializedVersion: 2
+    Hash: b502e5ca974381d3828ca4c709ea5a39
+  longitude: -105.28508196512836
+  latitude: 40.042751719079206
+  northCorrection: 359.8282648066125
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: 2872.2495, y: 785.0192, z: 1824.8536}
+      lookAt: {x: 1465.2535, y: 311.56998, z: 308.9965}
+      up: {x: -0.15963209, y: 0.97472936, z: -0.15627012}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Component#2
+    100002: Component#2 1
+    100004: Group#20
+    100006: Group#20 1
+    100008: UNSC Spirit Of Fire Dropship
+    100010: UNSC Spirit Of Fire Dropship 1
+    100012: UNSC Spirit Of Fire Dropship 2
+    100014: UNSC Spirit Of Fire Dropship 3
+    100016: UNSC Spirit Of Fire Dropship 4
+    100018: UNSC Spirit Of Fire Dropship 5
+    100020: UNSC Spirit Of Fire Dropship 6
+    100022: UNSC Spirit Of Fire Dropship 7
+    100024: UNSC Spirit Of Fire Dropship 8
+    100026: UNSC Spirit Of Fire Dropship 9
+    100028: //RootNode
+    400000: Component#2
+    400002: Component#2 1
+    400004: Group#20
+    400006: Group#20 1
+    400008: UNSC Spirit Of Fire Dropship
+    400010: UNSC Spirit Of Fire Dropship 1
+    400012: UNSC Spirit Of Fire Dropship 2
+    400014: UNSC Spirit Of Fire Dropship 3
+    400016: UNSC Spirit Of Fire Dropship 4
+    400018: UNSC Spirit Of Fire Dropship 5
+    400020: UNSC Spirit Of Fire Dropship 6
+    400022: UNSC Spirit Of Fire Dropship 7
+    400024: UNSC Spirit Of Fire Dropship 8
+    400026: UNSC Spirit Of Fire Dropship 9
+    400028: //RootNode
+    2100000: _defaultMat
+    2100002: _4
+    2100004: '[0136_Charcoal]'
+    2100006: '[0010_Snow]'
+    2100008: _Charcoal_
+    2100010: _Glass Blue Tint_1
+    2100012: '[0133_Gray]'
+    2100014: '[0097_DeepSkyBlue]'
+    2100016: '[0137_Black]'
+    2100018: _1
+    2100020: _29
+    2100022: '[0022_Maroon]'
+    2300000: Group#20
+    2300002: Group#20 1
+    2300004: UNSC Spirit Of Fire Dropship
+    2300006: UNSC Spirit Of Fire Dropship 1
+    2300008: UNSC Spirit Of Fire Dropship 2
+    2300010: UNSC Spirit Of Fire Dropship 3
+    2300012: UNSC Spirit Of Fire Dropship 4
+    2300014: UNSC Spirit Of Fire Dropship 5
+    2300016: UNSC Spirit Of Fire Dropship 6
+    2300018: UNSC Spirit Of Fire Dropship 7
+    2300020: UNSC Spirit Of Fire Dropship 8
+    2300022: UNSC Spirit Of Fire Dropship 9
+    2300024: //RootNode
+    3300000: Group#20
+    3300002: Group#20 1
+    3300004: UNSC Spirit Of Fire Dropship
+    3300006: UNSC Spirit Of Fire Dropship 1
+    3300008: UNSC Spirit Of Fire Dropship 2
+    3300010: UNSC Spirit Of Fire Dropship 3
+    3300012: UNSC Spirit Of Fire Dropship 4
+    3300014: UNSC Spirit Of Fire Dropship 5
+    3300016: UNSC Spirit Of Fire Dropship 6
+    3300018: UNSC Spirit Of Fire Dropship 7
+    3300020: UNSC Spirit Of Fire Dropship 8
+    3300022: UNSC Spirit Of Fire Dropship 9
+    3300024: //RootNode
+    4300000: Mesh Group#1
+    4300002: Mesh UNSC Spirit Of Fire Dropship
+    4300004: Mesh Group#20
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

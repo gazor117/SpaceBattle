@@ -1,0 +1,219 @@
+fileFormatVersion: 2
+guid: 61d96dc07fae57a49909cf2764f53d55
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b000000
+  assetHash:
+    serializedVersion: 2
+    Hash: ecabbe9ff50891073ee2c17e813f2e42
+  longitude: -105.26618987459499
+  latitude: 40.05043530736194
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: -400.63126, y: 423.22388, z: -95.84545}
+      lookAt: {x: 488.83084, y: 35.099594, z: 678.9723}
+      up: {x: 0.23566714, y: 0.94990337, z: 0.20529158}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes: []
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Component#1
+    100002: Component#1 1
+    100004: Component#2
+    100006: Engine
+    100008: Engine 1
+    100010: Engine 2
+    100012: Engine 3
+    100014: Engine 4
+    100016: Engine 5
+    100018: engine trail 2
+    100020: engine trail 2 1
+    100022: engine trail 2 2
+    100024: engine trail 2 3
+    100026: engine trail 2 4
+    100028: engine trail 2 5
+    100030: Group 2
+    100032: Group 31
+    100034: LC-007
+    100036: LC-007#1
+    100038: UNSC Logo
+    100040: UNSC Logo 1
+    100042: UNSC Musashi
+    100044: UNSC Musashi#1
+    100046: //RootNode
+    400000: Component#1
+    400002: Component#1 1
+    400004: Component#2
+    400006: Engine
+    400008: Engine 1
+    400010: Engine 2
+    400012: Engine 3
+    400014: Engine 4
+    400016: Engine 5
+    400018: engine trail 2
+    400020: engine trail 2 1
+    400022: engine trail 2 2
+    400024: engine trail 2 3
+    400026: engine trail 2 4
+    400028: engine trail 2 5
+    400030: Group 2
+    400032: Group 31
+    400034: LC-007
+    400036: LC-007#1
+    400038: UNSC Logo
+    400040: UNSC Logo 1
+    400042: UNSC Musashi
+    400044: UNSC Musashi#1
+    400046: //RootNode
+    2100000: _defaultMat
+    2100002: '[0135_DarkGray]'
+    2100004: '[0136_Charcoal]'
+    2100006: '[0137_Black]'
+    2100008: '[0087_Cyan]'
+    2100010: _4
+    2100012: _DarkGray_
+    2100014: '[_0097_DeepSkyBlue_]'
+    2100016: '[0097_DeepSkyBlue]'
+    2100018: '[0097_DeepSkyBlue]1'
+    2100020: _Gray6_
+    2100022: '[0010_Snow]'
+    2300000: Component#1
+    2300002: Component#1 1
+    2300004: Engine
+    2300006: Engine 1
+    2300008: Engine 2
+    2300010: Engine 3
+    2300012: Engine 4
+    2300014: Engine 5
+    2300016: engine trail 2
+    2300018: engine trail 2 1
+    2300020: engine trail 2 2
+    2300022: engine trail 2 3
+    2300024: engine trail 2 4
+    2300026: engine trail 2 5
+    2300028: LC-007
+    2300030: LC-007#1
+    2300032: UNSC Logo
+    2300034: UNSC Logo 1
+    2300036: UNSC Musashi
+    2300038: UNSC Musashi#1
+    3300000: Component#1
+    3300002: Component#1 1
+    3300004: Engine
+    3300006: Engine 1
+    3300008: Engine 2
+    3300010: Engine 3
+    3300012: Engine 4
+    3300014: Engine 5
+    3300016: engine trail 2
+    3300018: engine trail 2 1
+    3300020: engine trail 2 2
+    3300022: engine trail 2 3
+    3300024: engine trail 2 4
+    3300026: engine trail 2 5
+    3300028: LC-007
+    3300030: LC-007#1
+    3300032: UNSC Logo
+    3300034: UNSC Logo 1
+    3300036: UNSC Musashi
+    3300038: UNSC Musashi#1
+    4300000: Mesh Component#1
+    4300002: Mesh Engine
+    4300004: Mesh engine trail 2
+    4300006: Mesh UNSC Logo
+    4300008: Mesh UNSC Musashi#1
+    4300010: Mesh UNSC Musashi
+    4300012: Mesh LC-007
+    4300014: Mesh LC-007#1
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.0254
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
