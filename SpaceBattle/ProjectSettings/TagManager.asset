@@ -12,6 +12,7 @@ TagManager:
   - bullet
   - CVNTbullet
   - UNSCbullet
+  - SOF
   layers:
   - Default
   - TransparentFX

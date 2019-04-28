@@ -4,6 +4,7 @@
     <e p="C:\Users\Gary\.Rider2018.2\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\Gary\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_SpaceBattle.456761712.00" t="ExcludeRecursive" />
     <e p="E:\Github Projects\SpaceBattle\SpaceBattle" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="3D Models" t="Include">
@@ -15,7 +16,140 @@
             </e>
           </e>
         </e>
+        <e p="_MK" t="Include">
+          <e p="MKGlowFree" t="Include">
+            <e p="Editor" t="Include">
+              <e p="EditorHelper.cs" t="Include" />
+              <e p="EditorHelper.EditorUIContent.cs" t="Include" />
+              <e p="MinMaxRangeDrawer.cs" t="Include" />
+              <e p="MKGlowEditor.cs" t="Include" />
+              <e p="SelectiveStandardShaderGUI.cs" t="Include" />
+            </e>
+            <e p="Examples" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="Asteroid.cs" t="Include" />
+                <e p="AsteroidSpawner.cs" t="Include" />
+                <e p="ChangeSettingsLegacy.cs" t="Include" />
+                <e p="Cube.cs" t="Include" />
+                <e p="DestroyOpenMenuText.cs" t="Include" />
+                <e p="HandleMenu.cs" t="Include" />
+                <e p="MoveCamera.cs" t="Include" />
+                <e p="RotateObject.cs" t="Include" />
+                <e p="SpectateObjects.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Legacy_3_0_7" t="Include">
+              <e p="ReadMe.txt" t="Include" />
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="Common.cs" t="Include" />
+              <e p="Compatibility.cs" t="Include" />
+              <e p="Effect.cs" t="Include" />
+              <e p="IDimension.cs" t="Include" />
+              <e p="MinMaxRange.cs" t="Include" />
+              <e p="MipBuffer.cs" t="Include" />
+              <e p="MKGlow.cs" t="Include" />
+              <e p="PipelineExtensions.cs" t="Include" />
+              <e p="PipelineProperties.cs" t="Include" />
+              <e p="RenderContext.cs" t="Include" />
+              <e p="RenderTargetContext.cs" t="Include" />
+              <e p="Resources.cs" t="Include" />
+              <e p="Settings.cs" t="Include" />
+            </e>
+            <e p="Shaders" t="Include">
+              <e p="Effect" t="Include">
+                <e p="MKGlowSelectiveRender.shader" t="Include" />
+                <e p="MKGlowSM20.shader" t="Include" />
+                <e p="MKGlowSM25.shader" t="Include" />
+                <e p="MKGlowSM30.shader" t="Include" />
+                <e p="MKGlowSM35.shader" t="Include" />
+                <e p="MKGlowSM40.shader" t="Include" />
+              </e>
+              <e p="Inc" t="Include">
+                <e p="Common.hlsl" t="Include" />
+                <e p="Composite.hlsl" t="Include" />
+                <e p="CompositeSample.hlsl" t="Include" />
+                <e p="Copy.hlsl" t="Include" />
+                <e p="Debug.hlsl" t="Include" />
+                <e p="Downsample.hlsl" t="Include" />
+                <e p="Presample.hlsl" t="Include" />
+                <e p="Sprite.hlsl" t="Include" />
+                <e p="UI.hlsl" t="Include" />
+                <e p="Upsample.hlsl" t="Include" />
+              </e>
+              <e p="VariantsLuminance" t="Include">
+                <e p="Sprites" t="Include">
+                  <e p="Sprites-Default.shader" t="Include" />
+                  <e p="Sprites-Diffuse.shader" t="Include" />
+                </e>
+                <e p="UI" t="Include">
+                  <e p="UI-Default.shader" t="Include" />
+                  <e p="UI-DefaultETC1.shader" t="Include" />
+                  <e p="UI-DefaultFont.shader" t="Include" />
+                  <e p="UI-Lit-Bumped.shader" t="Include" />
+                  <e p="UI-Lit-Detail.shader" t="Include" />
+                  <e p="UI-Lit-Refraction.shader" t="Include" />
+                  <e p="UI-Lit-RefractionDetail.shader" t="Include" />
+                  <e p="UI-Lit-Transparent.shader" t="Include" />
+                  <e p="UI-Unlit-Detail.shader" t="Include" />
+                  <e p="UI-Unlit-Text.shader" t="Include" />
+                  <e p="UI-Unlit-TextDetail.shader" t="Include" />
+                  <e p="UI-Unlit-Transparent.shader" t="Include" />
+                </e>
+              </e>
+              <e p="VariantsSelective" t="Include">
+                <e p="Legacy" t="Include">
+                  <e p="Cutout" t="Include">
+                    <e p="MK_Cutout-Diffuse.shader" t="Include" />
+                    <e p="MK_Cutout-DiffuseBumped.shader" t="Include" />
+                    <e p="MK_Cutout-DiffuseBumpSpec.shader" t="Include" />
+                    <e p="MK_Cutout-Glossy.shader" t="Include" />
+                  </e>
+                  <e p="Illumin" t="Include">
+                    <e p="MK_Illumin-Diffuse.shader" t="Include" />
+                    <e p="MK_Illumin-DiffuseBumped.shader" t="Include" />
+                    <e p="MK_Illumin-DiffuseBumpSpec.shader" t="Include" />
+                    <e p="MK_Illumin-Glossy.shader" t="Include" />
+                  </e>
+                  <e p="MKGlowStandard.shader" t="Include" />
+                  <e p="MKGlowStandardSpecular.shader" t="Include" />
+                  <e p="Normal" t="Include">
+                    <e p="MK_Normal-Diffuse.shader" t="Include" />
+                    <e p="MK_Normal-DiffuseBumped.shader" t="Include" />
+                    <e p="MK_Normal-DiffuseBumpSpec.shader" t="Include" />
+                    <e p="MK_Normal-Glossy.shader" t="Include" />
+                  </e>
+                  <e p="Other" t="Include">
+                    <e p="MK_Illumin-Diffuse.shader" t="Include" />
+                    <e p="MK_Mobile-Diffuse.shader" t="Include" />
+                    <e p="MK_Unlit-Normal.shader" t="Include" />
+                  </e>
+                  <e p="Particle" t="Include">
+                    <e p="MK_Particle Add.shader" t="Include" />
+                    <e p="MK_Particle AddMultiply.shader" t="Include" />
+                    <e p="MK_Particle Alpha Blend.shader" t="Include" />
+                    <e p="MK_Particle Multiply.shader" t="Include" />
+                  </e>
+                  <e p="Transparent" t="Include">
+                    <e p="MK_Transparent-Diffuse.shader" t="Include" />
+                    <e p="MK_Transparent-DiffuseBumped.shader" t="Include" />
+                    <e p="MK_Transparent-DiffuseBumpSpec.shader" t="Include" />
+                    <e p="MK_Transparent-Glossy.shader" t="Include" />
+                  </e>
+                </e>
+                <e p="Sprites" t="Include">
+                  <e p="Sprites-Default.shader" t="Include" />
+                  <e p="Sprites-Diffuse.shader" t="Include" />
+                </e>
+                <e p="UI" t="Include">
+                  <e p="UI-Default.shader" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
+        </e>
         <e p="Scripts" t="Include">
+          <e p="Arrive.cs" t="Include" />
           <e p="BansheeController.cs" t="Include" />
           <e p="Boid.cs" t="Include" />
           <e p="Bullet.cs" t="Include" />
@@ -30,6 +164,7 @@
           <e p="PelicanController.cs" t="Include" />
           <e p="Pursue.cs" t="Include" />
           <e p="SelectTarget.cs" t="Include" />
+          <e p="ShipArrived.cs" t="Include" />
           <e p="ShipManager.cs" t="Include" />
           <e p="ShipSpawning.cs" t="Include" />
           <e p="Shooting.cs" t="Include" />

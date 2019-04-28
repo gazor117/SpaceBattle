@@ -45,6 +45,12 @@ class PursueState : State
 
         bool enemyInFront;
         if (Vector3.Distance(tempTarget.transform.position,
+                owner.transform.position) < 1500)
+        {
+            owner.GetComponent<Pursue>().rangeCheck = true;
+        }
+        
+        if (Vector3.Distance(tempTarget.transform.position,
                 owner.transform.position) < 500 )
         {
             

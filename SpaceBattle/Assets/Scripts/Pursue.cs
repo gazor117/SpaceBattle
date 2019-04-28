@@ -7,6 +7,8 @@ public class Pursue : SteeringBehaviour
     public Boid target;
 
     Vector3 targetPos;
+    public float time;
+    public bool rangeCheck;
 
     public void OnDrawGizmos()
     {
@@ -22,7 +24,14 @@ public class Pursue : SteeringBehaviour
         target = GetComponent<SelectTarget>().targetBoid;
         
         float dist = Vector3.Distance(target.transform.position, transform.position);
-        float time = dist / boid.maxSpeed;
+        if (rangeCheck)
+        {
+            time = dist / boid.maxSpeed;
+        }
+        else
+        {
+            time = 1;
+        }
 
         targetPos = target.transform.position + target.velocity  * time;                        // Commented 
 
