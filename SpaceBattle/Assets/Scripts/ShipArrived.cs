@@ -25,13 +25,25 @@ public class ShipArrived : MonoBehaviour
     {
         if (col.CompareTag("SOF"))
         {
-            UNSCSpawner.SetActive(true);
-            CVNTSpawner.SetActive(true);
+            if (UNSCSpawner != null)
+            {
+                UNSCSpawner.SetActive(true);
+                CVNTSpawner.SetActive(true);
 
-            battleBegun = true;
+                battleBegun = true;
+            }
 
         }
     }
 
-    
+    private void OnTriggerStay(Collider col)
+    {
+        if (col.CompareTag("SOF"))
+        {
+            if (Vector3.Distance(col.gameObject.transform.position, transform.position) < 20)
+            {
+                col.GetComponent<Arrive>().enabled = false;
+            }
+        }
+    }
 }

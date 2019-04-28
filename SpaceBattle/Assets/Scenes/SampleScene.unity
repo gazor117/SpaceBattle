@@ -525,7 +525,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430634016}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fd1d0e4e5ce6cb540a8714fe9ae0cbd1, type: 3}
   m_Name: 
@@ -545,7 +545,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 164.62, y: 236.32, z: 1}
-  m_Center: {x: -100, y: 100, z: 2041.05}
+  m_Center: {x: -100, y: 100, z: 100}
 --- !u!1001 &494255373
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -632,6 +632,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960444601134524279, guid: e77d525225e38e347bea9b8e8969e8f6,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960444601134524279, guid: e77d525225e38e347bea9b8e8969e8f6,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 414
+      objectReference: {fileID: 0}
+    - target: {fileID: 5303561101971717697, guid: e77d525225e38e347bea9b8e8969e8f6,
+        type: 3}
+      propertyPath: maxForce
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 8890487217323364353, guid: e77d525225e38e347bea9b8e8969e8f6,
         type: 3}
@@ -904,7 +919,7 @@ MonoBehaviour:
   damping: 0.01
   banking: 0.107
   maxSpeed: 200
-  maxForce: 80
+  maxForce: 30
 --- !u!65 &1124644520
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -974,7 +989,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1145788154}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fd1d0e4e5ce6cb540a8714fe9ae0cbd1, type: 3}
   m_Name: 
@@ -994,7 +1009,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 164.62, y: 236.32, z: 1}
-  m_Center: {x: -100, y: 100, z: 2041.05}
+  m_Center: {x: -100, y: 100, z: 100}
 --- !u!4 &1221674682 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3067918256998603833, guid: 45ad60cb6a3cc3e47b80d599e0c4a1d4,
@@ -1314,6 +1329,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 4960444601134524279, guid: e77d525225e38e347bea9b8e8969e8f6,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960444601134524279, guid: e77d525225e38e347bea9b8e8969e8f6,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 414
+      objectReference: {fileID: 0}
+    - target: {fileID: 5303561101971717697, guid: e77d525225e38e347bea9b8e8969e8f6,
+        type: 3}
+      propertyPath: maxForce
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 8890487217323364353, guid: e77d525225e38e347bea9b8e8969e8f6,
         type: 3}
       propertyPath: slowingDistance
@@ -1412,6 +1442,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960444601134524279, guid: e77d525225e38e347bea9b8e8969e8f6,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960444601134524279, guid: e77d525225e38e347bea9b8e8969e8f6,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 414
+      objectReference: {fileID: 0}
+    - target: {fileID: 5303561101971717697, guid: e77d525225e38e347bea9b8e8969e8f6,
+        type: 3}
+      propertyPath: maxForce
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 8890487217323364353, guid: e77d525225e38e347bea9b8e8969e8f6,
         type: 3}
@@ -1707,7 +1752,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1633531562}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fd1d0e4e5ce6cb540a8714fe9ae0cbd1, type: 3}
   m_Name: 
@@ -1727,7 +1772,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 164.62, y: 236.32, z: 1}
-  m_Center: {x: -100, y: 100, z: 2041.05}
+  m_Center: {x: -100, y: 100, z: 100}
 --- !u!1 &1700369195
 GameObject:
   m_ObjectHideFlags: 0
@@ -2248,7 +2293,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2122909531}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fd1d0e4e5ce6cb540a8714fe9ae0cbd1, type: 3}
   m_Name: 
@@ -2268,7 +2313,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 164.62, y: 236.32, z: 1}
-  m_Center: {x: -100, y: 100, z: 2041.05}
+  m_Center: {x: -100, y: 100, z: 100}
 --- !u!1001 &2129893746
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2567,6 +2612,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960444601134524279, guid: e77d525225e38e347bea9b8e8969e8f6,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960444601134524279, guid: e77d525225e38e347bea9b8e8969e8f6,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 414
+      objectReference: {fileID: 0}
+    - target: {fileID: 5303561101971717697, guid: e77d525225e38e347bea9b8e8969e8f6,
+        type: 3}
+      propertyPath: maxForce
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 8890487217323364353, guid: e77d525225e38e347bea9b8e8969e8f6,
         type: 3}

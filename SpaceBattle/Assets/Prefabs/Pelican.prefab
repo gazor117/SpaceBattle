@@ -132,6 +132,8 @@ MonoBehaviour:
   enemyTag: CVNT
   explosionEffect: {fileID: 4396141350686427710, guid: 7e3402f1332addc4a8d4460e073d5a0c,
     type: 3}
+  disperseRange: 1000
+  engagmentRange: 500
 --- !u!114 &9067207554119265927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,6 +150,8 @@ MonoBehaviour:
   force: {x: 0, y: 0, z: 0}
   boid: {fileID: 0}
   target: {fileID: 0}
+  time: 0
+  rangeCheck: 0
 --- !u!114 &2910360738133211671
 MonoBehaviour:
   m_ObjectHideFlags: 0

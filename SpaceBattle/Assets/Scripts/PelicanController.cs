@@ -11,6 +11,8 @@ class PursueState : State
     public float startDecelerate;
     public float stopDecelerate;
     public float decelerationSpeed;
+    private float disperseRange;
+    private float engagementRange;
     private PelicanController PC;
     private Vector3 thisShip;
     private Vector3 enemyShip;
@@ -24,9 +26,10 @@ class PursueState : State
         thisMaxSpeed = owner.GetComponent<Boid>().maxSpeed;
         
         PC = owner.GetComponent<PelicanController>();
-        
-        
-        
+
+
+        disperseRange = PC.disperseRange;
+        engagementRange = PC.engagmentRange;
         startDecelerate = PC.startDecelerate;
         stopDecelerate = PC.stopDecelerate;
         decelerationSpeed = PC.decelerationSpeed;
@@ -45,7 +48,7 @@ class PursueState : State
 
         bool enemyInFront;
         if (Vector3.Distance(tempTarget.transform.position,
-                owner.transform.position) < 1500)
+                owner.transform.position) < disperseRange)
         {
             owner.GetComponent<Pursue>().rangeCheck = true;
         }
@@ -141,6 +144,7 @@ class FleeState : State
     private GameObject tempTarget;
     
     
+    
     public override void Enter()
     {
         owner.GetComponent<Flee>().enabled = true;
@@ -227,6 +231,7 @@ public class PelicanController : MonoBehaviour
     public float startDecelerate;
     public float stopDecelerate;
     public float decelerationSpeed;
+    [HideInInspector]
     public float startMaxSpeed;
     public int health;
     public string enemyTag;
@@ -234,6 +239,8 @@ public class PelicanController : MonoBehaviour
     private GameObject GM;
     private List<GameObject> EnemyRefs;
     private bool targetAlive = true;
+    public float disperseRange;
+    public float engagmentRange;
     
     // Start is called before the first frame update
     void Start()
