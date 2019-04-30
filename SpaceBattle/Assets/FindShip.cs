@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 
 public class FindShip : MonoBehaviour
@@ -19,6 +20,9 @@ public class FindShip : MonoBehaviour
     private int shipAmount;
 
     private bool arrayNotPopulated = true;
+
+    private GameObject shipToFollow;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -59,8 +63,18 @@ public class FindShip : MonoBehaviour
                 }
 
             }
-            
         }
         
+    }
+
+    void GetTargetShip()
+    {
+        foreach (GameObject ship in AllShips)
+        {
+            if (ship.GetComponent<PelicanController>().health < 30 && ship.GetComponent<Flee>().enabled)
+            {
+                GetComponent<CinemachineVirtualCamera>().Follow = ship.transform;
+            }
+        }
     }
 }
