@@ -150,6 +150,7 @@
         </e>
         <e p="DestroySelf.cs" t="Include" />
         <e p="FindShip.cs" t="Include" />
+        <e p="FollowShip.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Arrive.cs" t="Include" />
           <e p="BansheeController.cs" t="Include" />
