@@ -22,6 +22,8 @@ public class FindShip : MonoBehaviour
     private bool arrayNotPopulated = true;
 
     private GameObject shipToFollow;
+
+    public bool testCamera;
     
     // Start is called before the first frame update
     void Start()
@@ -37,11 +39,16 @@ public class FindShip : MonoBehaviour
     void Update()
     {
        CheckBattleStarted();
+        if (testCamera)
+        {
+            GetTargetShip();
+            testCamera = false;
+        }
     }
 
     void PopulateArray()
     {
-        
+        AllShips.Clear();
         AllShips.AddRange(UNSCShips);
         AllShips.AddRange(CVNTShips);
         arrayNotPopulated = false;
@@ -69,12 +76,19 @@ public class FindShip : MonoBehaviour
 
     void GetTargetShip()
     {
+        PopulateArray();
         foreach (GameObject ship in AllShips)
         {
-            if (ship.GetComponent<PelicanController>().health < 30 && ship.GetComponent<Flee>().enabled)
+            if (ship.GetComponent<PelicanController>().health < 30 && ship.GetComponent<Flee>().enabled && GetComponent<CinemachineVirtualCamera>().Follow == null)
             {
-                GetComponent<CinemachineVirtualCamera>().Follow = ship.transform;
+                GetComponent<CinemachineVirtualCamera>().Follow = ship.GetComponent<PelicanController>().target.transform;
+                GetComponent<CinemachineVirtualCamera>().LookAt = ship.transform;
             }
+        }
+
+        if (GetComponent<CinemachineVirtualCamera>().Follow == null)
+        {
+            Debug.Log("No target for Action Camera");
         }
     }
 }
