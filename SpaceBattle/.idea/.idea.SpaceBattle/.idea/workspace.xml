@@ -61,29 +61,29 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="2233" />
+          <entry key="cs" value="2304" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="2233" />
+          <entry key="C#" value="2304" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="cs" value="8" />
+          <entry key="cs" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="C#" value="8" />
+          <entry key="C#" value="9" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/PathFollowing.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
@@ -98,6 +98,22 @@
                 <marker date="1552386240191" expanded="true" signature="611:665" ph="{...}" />
                 <marker date="1552386240191" expanded="true" signature="709:784" ph="{...}" />
                 <marker date="1552386240191" expanded="true" signature="797:866" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/DestroySelf.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+              <folding>
+                <marker date="1556631982859" expanded="false" signature="6:78" ph="..." />
+                <marker date="1556631982859" expanded="true" signature="120:388" ph="{...}" />
+                <marker date="1556631982859" expanded="true" signature="192:240" ph="{...}" />
+                <marker date="1556631982859" expanded="true" signature="298:319" ph="{...}" />
+                <marker date="1556631982859" expanded="true" signature="345:386" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -191,6 +207,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ShipSpawning.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SteeringBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PathFollow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/DestroySelf.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/OffsetPursue.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PathFollowing.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Boid.cs" root0="FORCE_HIGHLIGHTING" />
@@ -222,10 +239,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/PelicanController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ShipArrived.cs" />
         <option value="$PROJECT_DIR$/Assets/FindShip.cs" />
+        <option value="$PROJECT_DIR$/Assets/DestroySelf.cs" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="915" />
     <option name="y" value="-10" />
     <option name="width" value="1640" />
@@ -304,12 +322,12 @@
       <workItem from="1556455908447" duration="7787000" />
       <workItem from="1556612080337" duration="3003000" />
       <workItem from="1556615781606" duration="2144000" />
-      <workItem from="1556628683727" duration="1839000" />
+      <workItem from="1556628683727" duration="2570000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94131000" />
+    <option name="totallyTimeSpent" value="94862000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -498,6 +516,20 @@
             <marker date="1552386240191" expanded="true" signature="611:665" ph="{...}" />
             <marker date="1552386240191" expanded="true" signature="709:784" ph="{...}" />
             <marker date="1552386240191" expanded="true" signature="797:866" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/DestroySelf.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+          <folding>
+            <marker date="1556631982859" expanded="false" signature="6:78" ph="..." />
+            <marker date="1556631982859" expanded="true" signature="120:388" ph="{...}" />
+            <marker date="1556631982859" expanded="true" signature="192:240" ph="{...}" />
+            <marker date="1556631982859" expanded="true" signature="298:319" ph="{...}" />
+            <marker date="1556631982859" expanded="true" signature="345:386" ph="{...}" />
           </folding>
         </state>
       </provider>

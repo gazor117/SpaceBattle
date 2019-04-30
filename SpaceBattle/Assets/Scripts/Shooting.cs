@@ -34,6 +34,7 @@ public class Shooting : MonoBehaviour
         {
             GameObject temp = Instantiate(bulletPrefab, gunBarrel.transform.position, gameObject.transform.rotation);
             temp.tag = (gameObject.tag + "bullet");
+            temp.transform.SetParent(GameObject.FindWithTag("BH").transform);
 //            Debug.Log(temp.tag);
             yield return new WaitForSeconds(bulletDelay);
         }

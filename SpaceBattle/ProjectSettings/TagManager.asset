@@ -13,6 +13,7 @@ TagManager:
   - CVNTbullet
   - UNSCbullet
   - SOF
+  - BH
   layers:
   - Default
   - TransparentFX
