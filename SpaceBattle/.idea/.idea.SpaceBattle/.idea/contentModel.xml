@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Gary\.Rider2018.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Gary\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_SpaceBattle.456761712.00" t="ExcludeRecursive" />
-    <e p="E:\Github Projects\SpaceBattle\SpaceBattle" t="IncludeRecursive">
+    <e p="C:\Users\oreil\.Rider2018.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\oreil\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_SpaceBattle.-1752557649.00" t="ExcludeRecursive" />
+    <e p="C:\Users\oreil\OneDrive\Documents\GitHub\SpaceBattle\SpaceBattle" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -188,6 +188,35 @@
             <e p="SketchfabExporter.cs" t="Include" />
             <e p="SketchfabImporter.cs" t="Include" />
             <e p="SketchfabPlugin.cs" t="Include" />
+          </e>
+        </e>
+        <e p="VolumetricLines" t="Include">
+          <e p="ExampleScenes" t="Include">
+            <e p="ExampleScripts" t="Include">
+              <e p="CannonBehavior.cs" t="Include" />
+              <e p="CreateSinShapedLineStrip.cs" t="Include" />
+              <e p="ShotBehavior.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="Utils" t="Include">
+              <e p="TransformExtensionMethods.cs" t="Include" />
+            </e>
+            <e p="VolumetricLineBehavior.cs" t="Include" />
+            <e p="VolumetricLineSettings.cs" t="Include" />
+            <e p="VolumetricLineStripBehavior.cs" t="Include" />
+            <e p="VolumetricLineVertexData.cs" t="Include" />
+            <e p="VolumetricMultiLineBehavior.cs" t="Include" />
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="_SimpleShader.cginc" t="Include" />
+            <e p="_StripShader.cginc" t="Include" />
+            <e p="Additive.shader" t="Include" />
+            <e p="AlphaBlended.shader" t="Include" />
+            <e p="Fast-Additive.shader" t="Include" />
+            <e p="Fast-AlphaBlended.shader" t="Include" />
+            <e p="Strip-Additive.shader" t="Include" />
+            <e p="Strip-AlphaBlended.shader" t="Include" />
           </e>
         </e>
       </e>

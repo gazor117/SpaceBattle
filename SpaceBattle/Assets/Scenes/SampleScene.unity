@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.04345821, g: 0.041858047, b: 0.044895597, a: 1}
+  m_IndirectSpecularColor: {r: 0.04439433, g: 0.04188624, b: 0.04585708, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2602,7 +2602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f29efdf026ea1a440811cdf88d09e559, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShipAmount: 80
+  ShipAmount: 40
   ShipPrefabs:
   - {fileID: 9067207554119265932, guid: e20c5ec490c0af247b7a768961d79c95, type: 3}
   GameManager: {fileID: 0}
@@ -3555,7 +3555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f29efdf026ea1a440811cdf88d09e559, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShipAmount: 80
+  ShipAmount: 40
   ShipPrefabs:
   - {fileID: 2287287146866401996, guid: baec74e9c269e4c459bcbcfe7c192680, type: 3}
   GameManager: {fileID: 0}
@@ -3938,7 +3938,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 39bd7afd82644f240a84801fcd4b373c, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.03
+  m_Volume: 0.138
   m_Pitch: 1
   Loop: 0
   Mute: 0
