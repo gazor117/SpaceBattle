@@ -278,7 +278,7 @@ class ReturnToStart : State
     public override void Enter()
     {
         owner.GetComponent<Seek>().enabled = true;
-        //owner.GetComponent<NoiseWander>().enabled = true;
+        owner.GetComponent<NoiseWander>().enabled = true;
         contactPoint = owner.GetComponent<PelicanController>().contactPoint;
         owner.GetComponent<Seek>().target = contactPoint;
     }
@@ -294,7 +294,7 @@ class ReturnToStart : State
     public override void Exit()
     {
         owner.GetComponent<Seek>().enabled = false;
-        //owner.GetComponent<NoiseWander>().enabled = false;
+        owner.GetComponent<NoiseWander>().enabled = false;
     }
 }
 

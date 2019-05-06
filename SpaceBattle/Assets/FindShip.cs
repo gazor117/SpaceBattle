@@ -25,6 +25,8 @@ public class FindShip : MonoBehaviour
 
     public bool testCamera;
     
+    float delay = 10f;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -73,6 +75,7 @@ public class FindShip : MonoBehaviour
                 if (shipAmount == UNSCShips.Count)
                 {
                     PopulateArray();
+                    StartCoroutine(NewShip());
                 }
 
             }
@@ -99,7 +102,14 @@ public class FindShip : MonoBehaviour
 
         if (GetComponent<CinemachineVirtualCamera>().Follow == null)
         {
-            Debug.Log("No target for Action Camera");
+//            Debug.Log("No target for Action Camera");
         }
+    }
+
+    IEnumerator NewShip()
+    {
+        yield return new WaitForSeconds(delay);
+        GetTargetShip();
+        testCamera = false;
     }
 }

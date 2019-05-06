@@ -56,7 +56,7 @@ public class FollowShip : MonoBehaviour
             if (GetComponent<CinemachineVirtualCamera>().Follow == null && testFindShip)
             {
                 FindShip();
-                Debug.Log("Ran");
+//                Debug.Log("Ran");
             }
             if (target != null)
             {

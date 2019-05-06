@@ -1428,7 +1428,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.1
-  far clip plane: 10000
+  far clip plane: 5000
   field of view: 40
   orthographic: 0
   orthographic size: 5
@@ -1454,7 +1454,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 0.6532815}
   m_LocalPosition: {x: -919.32666, y: -94.80603, z: 723.2465}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -3905,11 +3905,15 @@ PlayableDirector:
     - c09e6155b45283c43993957410b4e38c: {fileID: 773414239}
     - 4817ca955e0fa834fabd6f50f11ee0e6: {fileID: 2043416116}
     - 0e7dbd508a84b6240b975c0eb446f6e7: {fileID: 952089389}
+    - 27b6ac79bd0023043ad5ac21b637fd32: {fileID: 773414239}
+    - 28d8988f93153a242be857eb67d58c47: {fileID: 2043416116}
     - cf12360db92a7304b88f8b065df0fbf8: {fileID: 633708884}
+    - 83cdd88feb77a904b9a9c65c204c7d8f: {fileID: 2043416116}
     - 2ed7fa2406461be4085cb15830fe2f1e: {fileID: 398454338}
     - 63d278b438281504fb85c7a170b6812a: {fileID: 398454338}
     - bee5e39895ab2ff4abae042f7f824a17: {fileID: 1966814221}
     - b0a1e84322361b24383f749b6fe72a21: {fileID: 1068131278}
+    - 200059c3c97410f4ca9df9aac4cc0841: {fileID: 773414239}
     - a9bfbd22ae11725438f1ffd15788ab85: {fileID: 2014551265}
     - 74e053239aed3c64ea48cb106d88c035: {fileID: 347835842}
 --- !u!1 &1700369195

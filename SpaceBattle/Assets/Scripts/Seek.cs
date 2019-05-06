@@ -24,7 +24,7 @@ public class Seek : SteeringBehaviour
     
     public override Vector3 Calculate()
     {
-        Debug.Log("Seeked");
+//        Debug.Log("Seeked");
         return boid.SeekForce(target);    
     }
 
