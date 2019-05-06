@@ -85,7 +85,7 @@ public class SelectTarget : MonoBehaviour
         {
             if (Mathf.RoundToInt(EnemyDist.Min()) == Mathf.RoundToInt(Vector3.Distance(transform.position, EnemyRefs[i].transform.position)))
             {
-//                Debug.Log("Second FOR LOOP");
+                //Debug.Log("Second FOR LOOP");
 
                 tempTarget = EnemyRefs[i];
                

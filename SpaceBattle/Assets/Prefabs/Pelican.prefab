@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 2933555485442838463}
   - component: {fileID: 7522780259486040740}
   - component: {fileID: 6199335120094825882}
+  - component: {fileID: 5229883700332354505}
   m_Layer: 0
   m_Name: Pelican
   m_TagString: UNSC
@@ -173,6 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d42b50940dfb9cc4082759284ed2b405, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  behaviours: []
   force: {x: 0, y: 0, z: 0}
   acceleration: {x: 0, y: 0, z: 0}
   velocity: {x: 0, y: 0, z: 0}
@@ -222,6 +224,9 @@ MonoBehaviour:
     type: 3}
   disperseRange: 1000
   engagmentRange: 500
+  maxFleeDistance: 1250
+  contactPoint: {x: 0, y: 0, z: 0}
+  initialCombat: 0
 --- !u!114 &9067207554119265927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -346,8 +351,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 2104643449752155664, guid: f18729ba0787d254d91e15f82a2d82de,
     type: 3}
-  bulletDelay: 0.3
+  bulletDelayStart: 0.2
   gunBarrel: {fileID: 2030459812989264009}
+  burstRate: 3
+  burstDelay: 1.5
 --- !u!136 &6199335120094825882
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -362,6 +369,23 @@ CapsuleCollider:
   m_Height: 78.47
   m_Direction: 2
   m_Center: {x: 0, y: 3.6999998, z: -5.2}
+--- !u!114 &5229883700332354505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9067207554119265932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca0540bfa238bf94e9a90876fc2827d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 5
+  force: {x: 0, y: 0, z: 0}
+  boid: {fileID: 0}
+  targetGameObject: {fileID: 0}
+  target: {x: 0, y: 0, z: 0}
 --- !u!1001 &9067207553752259927
 PrefabInstance:
   m_ObjectHideFlags: 0

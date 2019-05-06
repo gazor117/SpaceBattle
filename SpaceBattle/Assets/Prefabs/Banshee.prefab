@@ -62,6 +62,7 @@ GameObject:
   - component: {fileID: 4813315473302032211}
   - component: {fileID: 7842746385998086703}
   - component: {fileID: 2026222114544584078}
+  - component: {fileID: 2495358670768991429}
   - component: {fileID: 6507651339853894391}
   m_Layer: 0
   m_Name: Banshee
@@ -106,6 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d42b50940dfb9cc4082759284ed2b405, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  behaviours: []
   force: {x: 0, y: 0, z: 0}
   acceleration: {x: 0, y: 0, z: 0}
   velocity: {x: 0, y: 0, z: 0}
@@ -173,6 +175,9 @@ MonoBehaviour:
     type: 3}
   disperseRange: 1000
   engagmentRange: 500
+  maxFleeDistance: 1250
+  contactPoint: {x: 0, y: 0, z: 0}
+  initialCombat: 0
 --- !u!114 &6170868556898569723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,8 +284,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 375151243991627460, guid: a301c0d81a90ae542aec4a96a203820e,
     type: 3}
-  bulletDelay: 0.3
+  bulletDelayStart: 0.2
   gunBarrel: {fileID: 5685689731862928261}
+  burstRate: 3
+  burstDelay: 1.5
+--- !u!114 &2495358670768991429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2287287146866401996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca0540bfa238bf94e9a90876fc2827d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 5
+  force: {x: 0, y: 0, z: 0}
+  boid: {fileID: 0}
+  targetGameObject: {fileID: 0}
+  target: {x: 0, y: 0, z: 0}
 --- !u!136 &6507651339853894391
 CapsuleCollider:
   m_ObjectHideFlags: 0

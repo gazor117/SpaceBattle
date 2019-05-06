@@ -44,6 +44,12 @@ public class FindShip : MonoBehaviour
             GetTargetShip();
             testCamera = false;
         }
+
+        if (GetComponent<CinemachineVirtualCamera>().Follow == null ||
+            GetComponent<CinemachineVirtualCamera>().LookAt == null)
+        {
+            testCamera = true;
+        }
     }
 
     void PopulateArray()
@@ -79,7 +85,12 @@ public class FindShip : MonoBehaviour
         PopulateArray();
         foreach (GameObject ship in AllShips)
         {
-            if (ship.GetComponent<PelicanController>().health < 30 && ship.GetComponent<Flee>().enabled && GetComponent<CinemachineVirtualCamera>().Follow == null)
+            if (ship.GetComponent<PelicanController>().health < 30 && ship.GetComponent<Flee>().enabled && GetComponent<CinemachineVirtualCamera>().Follow == null || GetComponent<CinemachineVirtualCamera>().LookAt == null  )
+            {
+                GetComponent<CinemachineVirtualCamera>().Follow = ship.GetComponent<PelicanController>().target.transform;
+                GetComponent<CinemachineVirtualCamera>().LookAt = ship.transform;
+            }
+            else if (ship.GetComponent<Flee>().enabled && GetComponent<CinemachineVirtualCamera>().Follow == null)
             {
                 GetComponent<CinemachineVirtualCamera>().Follow = ship.GetComponent<PelicanController>().target.transform;
                 GetComponent<CinemachineVirtualCamera>().LookAt = ship.transform;

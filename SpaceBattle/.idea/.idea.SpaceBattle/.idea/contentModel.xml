@@ -151,6 +151,13 @@
         <e p="DestroySelf.cs" t="Include" />
         <e p="FindShip.cs" t="Include" />
         <e p="FollowShip.cs" t="Include" />
+        <e p="GalaxyBox2" t="Include">
+          <e p="instructions.txt" t="Include" />
+          <e p="Scripts" t="Include">
+            <e p="examplescene.cs" t="Include" />
+            <e p="MouseLook.cs" t="Include" />
+          </e>
+        </e>
         <e p="Scripts" t="Include">
           <e p="Arrive.cs" t="Include" />
           <e p="BansheeController.cs" t="Include" />
@@ -166,6 +173,7 @@
           <e p="PathFollowing.cs" t="Include" />
           <e p="PelicanController.cs" t="Include" />
           <e p="Pursue.cs" t="Include" />
+          <e p="Seek.cs" t="Include" />
           <e p="SelectTarget.cs" t="Include" />
           <e p="ShipArrived.cs" t="Include" />
           <e p="ShipManager.cs" t="Include" />
@@ -188,6 +196,35 @@
             <e p="SketchfabExporter.cs" t="Include" />
             <e p="SketchfabImporter.cs" t="Include" />
             <e p="SketchfabPlugin.cs" t="Include" />
+          </e>
+        </e>
+        <e p="VolumetricLines" t="Include">
+          <e p="ExampleScenes" t="Include">
+            <e p="ExampleScripts" t="Include">
+              <e p="CannonBehavior.cs" t="Include" />
+              <e p="CreateSinShapedLineStrip.cs" t="Include" />
+              <e p="ShotBehavior.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="Utils" t="Include">
+              <e p="TransformExtensionMethods.cs" t="Include" />
+            </e>
+            <e p="VolumetricLineBehavior.cs" t="Include" />
+            <e p="VolumetricLineSettings.cs" t="Include" />
+            <e p="VolumetricLineStripBehavior.cs" t="Include" />
+            <e p="VolumetricLineVertexData.cs" t="Include" />
+            <e p="VolumetricMultiLineBehavior.cs" t="Include" />
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="_SimpleShader.cginc" t="Include" />
+            <e p="_StripShader.cginc" t="Include" />
+            <e p="Additive.shader" t="Include" />
+            <e p="AlphaBlended.shader" t="Include" />
+            <e p="Fast-Additive.shader" t="Include" />
+            <e p="Fast-AlphaBlended.shader" t="Include" />
+            <e p="Strip-Additive.shader" t="Include" />
+            <e p="Strip-AlphaBlended.shader" t="Include" />
           </e>
         </e>
       </e>

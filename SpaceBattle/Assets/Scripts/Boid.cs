@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Boid : MonoBehaviour
 {
-    List<SteeringBehaviour> behaviours = new List<SteeringBehaviour>();
+    public List<SteeringBehaviour> behaviours = new List<SteeringBehaviour>();
 
     public Vector3 force = Vector3.zero;
     public Vector3 acceleration = Vector3.zero;
@@ -42,6 +42,7 @@ public class Boid : MonoBehaviour
         //Debug.Log(desired);
         //Debug.Log(velocity);
         desired *= maxSpeed;
+        
         return desired - velocity;
     }
 

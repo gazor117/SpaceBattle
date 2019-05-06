@@ -49,19 +49,15 @@ public class FollowShip : MonoBehaviour
             {
                 FindShip();
                 //target.position += offset;
-                GetComponent<CinemachineVirtualCamera>().Follow = target;
+                
                 testFindShip = true;
             }
 
-            if (testFindShip)
+            if (GetComponent<CinemachineVirtualCamera>().Follow == null && testFindShip)
             {
-               
-
-
-                   
-                
+                FindShip();
+                Debug.Log("Ran");
             }
-
             if (target != null)
             {
                 transform.rotation = target.rotation;
@@ -71,8 +67,9 @@ public class FollowShip : MonoBehaviour
 
     void FindShip()
     {
-        int ran = Random.Range(0, ShipRefs.Count);
+        int ran = Random.Range(ShipRefs.Count/4, ShipRefs.Count);
         target = ShipRefs[ran].transform;
+        GetComponent<CinemachineVirtualCamera>().Follow = target;
         
     }
 }

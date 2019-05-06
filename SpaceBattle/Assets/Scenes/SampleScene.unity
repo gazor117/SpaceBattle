@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 860a66ca4259b384f9ec01b687f71c3c, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 75196110195fb487ea816630c7adbf2a, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.04345821, g: 0.041858047, b: 0.044895597, a: 1}
+  m_IndirectSpecularColor: {r: 0.015260468, g: 0.014138193, b: 0.010731874, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -318,7 +318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: 0, y: 0, z: -10}
+  m_FollowOffset: {x: -4919, y: 196, z: -10}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -760,7 +760,7 @@ MonoBehaviour:
     FieldOfView: 40
     OrthographicSize: 10
     NearClipPlane: 0.1
-    FarClipPlane: 5000
+    FarClipPlane: 10000
     Dutch: 0
     LensShift: {x: 0, y: 0}
   m_Transitions:
@@ -866,7 +866,7 @@ MonoBehaviour:
     FieldOfView: 40
     OrthographicSize: 10
     NearClipPlane: 0.1
-    FarClipPlane: 5000
+    FarClipPlane: 10000
     Dutch: 0
     LensShift: {x: 0, y: 0}
   m_Transitions:
@@ -1361,6 +1361,11 @@ PrefabInstance:
       propertyPath: maxForce
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 5303561101971717697, guid: e77d525225e38e347bea9b8e8969e8f6,
+        type: 3}
+      propertyPath: maxSpeed
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 8890487217323364353, guid: e77d525225e38e347bea9b8e8969e8f6,
         type: 3}
       propertyPath: slowingDistance
@@ -1423,7 +1428,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.1
-  far clip plane: 5000
+  far clip plane: 10000
   field of view: 40
   orthographic: 0
   orthographic size: 5
@@ -1598,14 +1603,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 773414237}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.11441063, y: -0, z: -0, w: 0.9934336}
+  m_LocalPosition: {x: -1587, y: 1456, z: -1351}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 106242038}
   m_Father: {fileID: 1279351005}
   m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 13.139001, y: 0, z: 0}
 --- !u!114 &773414239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2183,13 +2188,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d42b50940dfb9cc4082759284ed2b405, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  behaviours: []
   force: {x: 0, y: 0, z: 0}
   acceleration: {x: 0, y: 0, z: 0}
   velocity: {x: 0, y: 0, z: 0}
   mass: 1
   damping: 0.01
   banking: 0.107
-  maxSpeed: 200
+  maxSpeed: 150
   maxForce: 30
 --- !u!65 &1124644520
 BoxCollider:
@@ -2602,7 +2608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f29efdf026ea1a440811cdf88d09e559, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShipAmount: 80
+  ShipAmount: 20
   ShipPrefabs:
   - {fileID: 9067207554119265932, guid: e20c5ec490c0af247b7a768961d79c95, type: 3}
   GameManager: {fileID: 0}
@@ -2674,8 +2680,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1325327001}
   - component: {fileID: 1325327004}
-  - component: {fileID: 1325327003}
   - component: {fileID: 1325327002}
+  - component: {fileID: 1325327003}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -2728,24 +2734,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1325327000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4044717213e31446939f7bd49c896ea, type: 3}
+  m_Script: {fileID: 11500000, guid: a4c41ac9245b87c4192012080077d830, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TrackedObjectOffset: {x: 0, y: 0, z: 0}
-  m_LookaheadTime: 0
-  m_LookaheadSmoothing: 10
-  m_LookaheadIgnoreY: 0
-  m_HorizontalDamping: 0.5
-  m_VerticalDamping: 0.5
-  m_ScreenX: 0.5
-  m_ScreenY: 0.5
-  m_DeadZoneWidth: 0
-  m_DeadZoneHeight: 0
-  m_SoftZoneWidth: 0.8
-  m_SoftZoneHeight: 0.8
-  m_BiasX: 0
-  m_BiasY: 0
-  m_CenterOnActivate: 1
 --- !u!114 &1325327004
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -3101,6 +3092,11 @@ PrefabInstance:
       propertyPath: maxForce
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 5303561101971717697, guid: e77d525225e38e347bea9b8e8969e8f6,
+        type: 3}
+      propertyPath: maxSpeed
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 8890487217323364353, guid: e77d525225e38e347bea9b8e8969e8f6,
         type: 3}
       propertyPath: slowingDistance
@@ -3256,7 +3252,7 @@ MonoBehaviour:
   m_NoiseProfile: {fileID: 11400000, guid: 8608ec81ee27a15488d33f9dad239e91, type: 2}
   m_AmplitudeGain: 1
   m_FrequencyGain: 1
-  mNoiseOffsets: {x: 0, y: 0, z: 0}
+  mNoiseOffsets: {x: -621.0415, y: 822.1786, z: 479.64926}
 --- !u!114 &1434284450
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -3514,6 +3510,11 @@ PrefabInstance:
       propertyPath: maxForce
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 5303561101971717697, guid: e77d525225e38e347bea9b8e8969e8f6,
+        type: 3}
+      propertyPath: maxSpeed
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 8890487217323364353, guid: e77d525225e38e347bea9b8e8969e8f6,
         type: 3}
       propertyPath: slowingDistance
@@ -3555,7 +3556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f29efdf026ea1a440811cdf88d09e559, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShipAmount: 80
+  ShipAmount: 20
   ShipPrefabs:
   - {fileID: 2287287146866401996, guid: baec74e9c269e4c459bcbcfe7c192680, type: 3}
   GameManager: {fileID: 0}
@@ -3901,6 +3902,8 @@ PlayableDirector:
     value: {fileID: 534669906}
   m_ExposedReferences:
     m_References:
+    - c09e6155b45283c43993957410b4e38c: {fileID: 773414239}
+    - 4817ca955e0fa834fabd6f50f11ee0e6: {fileID: 2043416116}
     - 0e7dbd508a84b6240b975c0eb446f6e7: {fileID: 952089389}
     - cf12360db92a7304b88f8b065df0fbf8: {fileID: 633708884}
     - 2ed7fa2406461be4085cb15830fe2f1e: {fileID: 398454338}
@@ -4335,7 +4338,7 @@ MonoBehaviour:
     FieldOfView: 40
     OrthographicSize: 10
     NearClipPlane: 0.1
-    FarClipPlane: 5000
+    FarClipPlane: 10000
     Dutch: 0
     LensShift: {x: 0, y: 0}
   m_Transitions:
@@ -5164,6 +5167,11 @@ PrefabInstance:
         type: 3}
       propertyPath: maxForce
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5303561101971717697, guid: e77d525225e38e347bea9b8e8969e8f6,
+        type: 3}
+      propertyPath: maxSpeed
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 8890487217323364353, guid: e77d525225e38e347bea9b8e8969e8f6,
         type: 3}
