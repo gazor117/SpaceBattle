@@ -41,7 +41,7 @@ public class FindShip : MonoBehaviour
     void Update()
     {
        CheckBattleStarted();
-        if (testCamera)
+        if (testCamera && arrayNotPopulated == false)
         {
             GetTargetShip();
             testCamera = false;

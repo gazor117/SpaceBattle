@@ -44,6 +44,9 @@ class PursueState : State
     public override void Think()
     {
         tempTarget = PC.target;
+        if (tempTarget != null)
+        { 
+        
         thisShip = owner.transform.position;
         enemyShip = tempTarget.transform.position;
         initialCombat = PC.initialCombat;
@@ -54,109 +57,117 @@ class PursueState : State
         //Vector3 enemyShip = tempTarget.transform.position;
 
         bool enemyInFront;
-        if (Vector3.Distance(tempTarget.transform.position,
-                owner.transform.position) < disperseRange)
-        {
-            owner.GetComponent<Pursue>().rangeCheck = true;
-        }
-
-        if (contactPointNotFound)
-        {
-            PC.contactPoint = (PC.target.transform.position + owner.transform.position)/2;
-            contactPointNotFound = false;
-            // temp = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            //temp.transform.position = PC.contactPoint;
-        }
         
-        if (Vector3.Distance(tempTarget.transform.position,
-                owner.transform.position) < 500 )
-        {
-            
-           //Debug.LogError("IN IF STATEMENT");
-            if (PC.AggressionLevel < tempTarget.GetComponent<PelicanController>().AggressionLevel)
+        
+
+
+            if (Vector3.Distance(tempTarget.transform.position,
+                    owner.transform.position) < disperseRange)
             {
-                owner.ChangeState(new FleeState());
-            }
-            
-            Vector3 directionToEnemy = (enemyShip - thisShip).normalized;
-            
-            float dotProduct = Vector3.Dot(directionToEnemy, owner.transform.forward);
-            enemyInFront = dotProduct > 0.3f ? true : false;
-            //Debug.Log(dotProduct + owner.tag);
-            if (enemyInFront && Vector3.Distance(tempTarget.transform.position,
-                    owner.transform.position) < engagementRange)
-            {
-                owner.GetComponent<Shooting>().enabled = true;
-                /*if (combat != true)
-                {
-                    initialCombat = true;
-                }
-                combat = true;*/
-            }
-            else
-            {
-                owner.GetComponent<Shooting>().enabled = false;
+                owner.GetComponent<Pursue>().rangeCheck = true;
             }
 
-            /*if (initialCombat && contactPointNotFound)
+            if (contactPointNotFound)
             {
-                PC.contactPoint = owner.transform.position;
-                GameObject temp = GameObject.CreatePrimitive(PrimitiveType.Cube);
-                temp.transform.position = PC.contactPoint;
-                PC.target.GetComponent<PelicanController>().contactPoint = owner.transform.position;
-                initialCombat = false;
-                PC.target.GetComponent<PelicanController>().initialCombat = false;
-                Debug.Log("initial combat");
-            }
-
-            if (PC.target.GetComponent<PelicanController>().contactPoint != Vector3.zero)
-            {
+                PC.contactPoint = (PC.target.transform.position + owner.transform.position) / 2;
                 contactPointNotFound = false;
-                Debug.Log("PointFound");
-            }*/
-           // Debug.Log(DecelerateForce(tempTarget.transform.position, startDecelerate,
-             //   stopDecelerate, decelerationSpeed));
-            //owner.GetComponent<Boid>().maxSpeed -= DecelerateForce(tempTarget.transform.position, startDecelerate,
-             //   stopDecelerate, decelerationSpeed);
-            /*if (ran > 5 && owner.CompareTag("UNSC" ) && owner.GetComponent<PelicanController>().stateChanged == false)
-            {
-                owner.ChangeState(new FleeState());
-                owner.GetComponent<PelicanController>().stateChanged  = true;
+                // temp = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                //temp.transform.position = PC.contactPoint;
+            }
 
-            }
-            else
+            if (Vector3.Distance(tempTarget.transform.position,
+                    owner.transform.position) < 500)
             {
-                owner.GetComponent<PelicanController>().stateChanged  = true;
+
+                //Debug.LogError("IN IF STATEMENT");
+                if (PC.AggressionLevel < tempTarget.GetComponent<PelicanController>().AggressionLevel)
+                {
+                    owner.ChangeState(new FleeState());
+                }
+
+                Vector3 directionToEnemy = (enemyShip - thisShip).normalized;
+
+                float dotProduct = Vector3.Dot(directionToEnemy, owner.transform.forward);
+                enemyInFront = dotProduct > 0.3f ? true : false;
+                //Debug.Log(dotProduct + owner.tag);
+                if (enemyInFront && Vector3.Distance(tempTarget.transform.position,
+                        owner.transform.position) < engagementRange)
+                {
+                    owner.GetComponent<Shooting>().enabled = true;
+                    /*if (combat != true)
+                    {
+                        initialCombat = true;
+                    }
+                    combat = true;*/
+                }
+                else
+                {
+                    owner.GetComponent<Shooting>().enabled = false;
+                }
+
+                /*if (initialCombat && contactPointNotFound)
+                {
+                    PC.contactPoint = owner.transform.position;
+                    GameObject temp = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                    temp.transform.position = PC.contactPoint;
+                    PC.target.GetComponent<PelicanController>().contactPoint = owner.transform.position;
+                    initialCombat = false;
+                    PC.target.GetComponent<PelicanController>().initialCombat = false;
+                    Debug.Log("initial combat");
+                }
+    
+                if (PC.target.GetComponent<PelicanController>().contactPoint != Vector3.zero)
+                {
+                    contactPointNotFound = false;
+                    Debug.Log("PointFound");
+                }*/
+                // Debug.Log(DecelerateForce(tempTarget.transform.position, startDecelerate,
+                //   stopDecelerate, decelerationSpeed));
+                //owner.GetComponent<Boid>().maxSpeed -= DecelerateForce(tempTarget.transform.position, startDecelerate,
+                //   stopDecelerate, decelerationSpeed);
+                /*if (ran > 5 && owner.CompareTag("UNSC" ) && owner.GetComponent<PelicanController>().stateChanged == false)
+                {
+                    owner.ChangeState(new FleeState());
+                    owner.GetComponent<PelicanController>().stateChanged  = true;
+    
+                }
+                else
+                {
+                    owner.GetComponent<PelicanController>().stateChanged  = true;
+                }
+                
+                if (ran < 5 && owner.CompareTag("CVNT") && owner.GetComponent<PelicanController>().stateChanged == false)
+                {
+                    owner.ChangeState(new FleeState());
+                    owner.GetComponent<PelicanController>().stateChanged  = true;
+                }
+                else
+                {
+                    owner.GetComponent<PelicanController>().stateChanged  = true;
+                }*/
             }
-            
-            if (ran < 5 && owner.CompareTag("CVNT") && owner.GetComponent<PelicanController>().stateChanged == false)
-            {
-                owner.ChangeState(new FleeState());
-                owner.GetComponent<PelicanController>().stateChanged  = true;
-            }
-            else
-            {
-                owner.GetComponent<PelicanController>().stateChanged  = true;
-            }*/
-        }
-        /*owner.GetComponent<Boid>().maxSpeed -= PC.DecelerateForce(tempTarget.transform.position, startDecelerate, stopDecelerate, decelerationSpeed);
-        Debug.Log(PC.DecelerateForce(tempTarget.transform.position, startDecelerate,
-            stopDecelerate, decelerationSpeed) + "Deceleration Force");*/
+
+            /*owner.GetComponent<Boid>().maxSpeed -= PC.DecelerateForce(tempTarget.transform.position, startDecelerate, stopDecelerate, decelerationSpeed);
+            Debug.Log(PC.DecelerateForce(tempTarget.transform.position, startDecelerate,
+                stopDecelerate, decelerationSpeed) + "Deceleration Force");*/
 //        Debug.Log("Distance"+Vector3.Distance(owner.transform.position, tempTarget.transform.position));
-        if (owner.GetComponent<Boid>().maxSpeed < thisMaxSpeed + 20 &&
-            Vector3.Distance(owner.transform.position, tempTarget.transform.position) > startDecelerate)
-        {
-            owner.GetComponent<Boid>().maxSpeed += 1 ;
+            if (owner.GetComponent<Boid>().maxSpeed < thisMaxSpeed + 20 &&
+                Vector3.Distance(owner.transform.position, tempTarget.transform.position) > startDecelerate)
+            {
+                owner.GetComponent<Boid>().maxSpeed += 1;
+            }
+
+            if (owner.GetComponent<Boid>().maxSpeed > PC.startMaxSpeed && Vector3.Distance(
+                    tempTarget.transform.position,
+                    owner.transform.position) < 100)
+            {
+                owner.GetComponent<Boid>().maxSpeed =
+                    Mathf.SmoothDamp(owner.GetComponent<Boid>().maxSpeed, PC.startMaxSpeed, ref decelerationSpeed,
+                        0.5f);
+            }
+
         }
-        if (owner.GetComponent<Boid>().maxSpeed > PC.startMaxSpeed && Vector3.Distance(tempTarget.transform.position,
-                owner.transform.position) < 100 )
-        {
-            owner.GetComponent<Boid>().maxSpeed =
-                Mathf.SmoothDamp(owner.GetComponent<Boid>().maxSpeed, PC.startMaxSpeed, ref decelerationSpeed, 0.5f);
-        }
-        
-        
-        
+
     }
 
     public override void Exit()
@@ -203,36 +214,41 @@ class FleeState : State
     public override void Think()
     {
         thisShip = owner.transform.position;
-        enemyShip = tempTarget.transform.position;
-        Vector3 directionToEnemy = (enemyShip - thisShip).normalized;
-        bool enemyInFront;
-        float dotProduct = Vector3.Dot(directionToEnemy, owner.transform.forward);
-        enemyInFront = dotProduct > 0.3f ? true : false;
+        if (tempTarget != null)
+        {
+            enemyShip = tempTarget.transform.position;
+            Vector3 directionToEnemy = (enemyShip - thisShip).normalized;
+            bool enemyInFront;
+            float dotProduct = Vector3.Dot(directionToEnemy, owner.transform.forward);
+            enemyInFront = dotProduct > 0.3f ? true : false;
 //        Debug.Log(owner.gameObject.tag + dotProduct);
-        if (enemyInFront)
-        {
-            owner.GetComponent<Shooting>().enabled = true;
-        }
-        else
-        {
-            owner.GetComponent<Shooting>().enabled = false;
-        }
-        if (owner.GetComponent<Boid>().maxSpeed > PC.startMaxSpeed)
-        {
-            owner.GetComponent<Boid>().maxSpeed =
-                Mathf.SmoothDamp(owner.GetComponent<Boid>().maxSpeed, PC.startMaxSpeed, ref decelerationSpeed, 0.5f);
+            if (enemyInFront)
+            {
+                owner.GetComponent<Shooting>().enabled = true;
+            }
+            else
+            {
+                owner.GetComponent<Shooting>().enabled = false;
+            }
+
+            if (owner.GetComponent<Boid>().maxSpeed > PC.startMaxSpeed)
+            {
+                owner.GetComponent<Boid>().maxSpeed =
+                    Mathf.SmoothDamp(owner.GetComponent<Boid>().maxSpeed, PC.startMaxSpeed, ref decelerationSpeed,
+                        0.5f);
+            }
+
+            /*if (Vector3.Distance(owner.transform.position, PC.target.transform.position) > PC.maxFleeDistance)
+            {
+                owner.ChangeState(new PursueState());
+            }*/
+
+            if (Vector3.Distance(owner.transform.position, PC.contactPoint) > PC.maxFleeDistance)
+            {
+                owner.ChangeState(new ReturnToStart());
+            }
         }
 
-        /*if (Vector3.Distance(owner.transform.position, PC.target.transform.position) > PC.maxFleeDistance)
-        {
-            owner.ChangeState(new PursueState());
-        }*/
-
-        if (Vector3.Distance(owner.transform.position, PC.contactPoint) > PC.maxFleeDistance)
-        {
-            owner.ChangeState(new ReturnToStart());
-        }
-        
 //        Debug.Log(Vector3.Distance(owner.transform.position, PC.contactPoint));
     }
 
@@ -339,7 +355,7 @@ public class PelicanController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (target == null)
         {

@@ -9,7 +9,11 @@ public class Flee : SteeringBehaviour
 
     public void Start()
     {
-        targetGameObject = GetComponent<SelectTarget>().TargetShip();
+        if (targetGameObject == null)
+        {
+            targetGameObject = GetComponent<PelicanController>().target;
+
+        }
 
     }
     

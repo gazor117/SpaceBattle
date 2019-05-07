@@ -21,20 +21,25 @@ public class Pursue : SteeringBehaviour
 
     public override Vector3 Calculate()
     {
-        target = GetComponent<SelectTarget>().targetBoid;
-        
-        float dist = Vector3.Distance(target.transform.position, transform.position);
-        if (rangeCheck)
+        if (GetComponent<PelicanController>().target != null)
         {
-            time = dist / boid.maxSpeed;
-        }
-        else
-        {
-            time = 1;
-        }
+            target = GetComponent<PelicanController>().target.GetComponent<Boid>();
 
-        targetPos = target.transform.position + target.velocity  * time;                        // Commented 
+
+            float dist = Vector3.Distance(target.transform.position, transform.position);
+            if (rangeCheck)
+            {
+                time = dist / boid.maxSpeed;
+            }
+            else
+            {
+                time = 1;
+            }
+
+            targetPos = target.transform.position + target.velocity * time; // Commented 
+        }
 
         return boid.SeekForce(targetPos);
+        
     }
 }

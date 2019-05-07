@@ -17,7 +17,7 @@ public class SelectTarget : MonoBehaviour
     [FormerlySerializedAs("target")] public Boid targetBoid;
     private bool enemiesSpawned;
 
-    public List<float> EnemyDist = new List<float>();
+    private List<float> EnemyDist = new List<float>();
 
     void Awake()
     {
