@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.0152388215, g: 0.014140529, b: 0.010716257, a: 1}
+  m_IndirectSpecularColor: {r: 0.015260468, g: 0.014138193, b: 0.010731874, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2608,7 +2608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f29efdf026ea1a440811cdf88d09e559, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShipAmount: 100
+  ShipAmount: 50
   ShipPrefabs:
   - {fileID: 9067207554119265932, guid: e20c5ec490c0af247b7a768961d79c95, type: 3}
   GameManager: {fileID: 0}
@@ -3556,7 +3556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f29efdf026ea1a440811cdf88d09e559, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShipAmount: 100
+  ShipAmount: 50
   ShipPrefabs:
   - {fileID: 2287287146866401996, guid: baec74e9c269e4c459bcbcfe7c192680, type: 3}
   GameManager: {fileID: 0}
@@ -4318,6 +4318,7 @@ MonoBehaviour:
   AllShips: []
   Waypoint: {fileID: 1628357670}
   testCamera: 0
+  delay: 10
 --- !u!114 &2043416116
 MonoBehaviour:
   m_ObjectHideFlags: 0

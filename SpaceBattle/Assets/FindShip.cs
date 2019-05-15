@@ -25,7 +25,8 @@ public class FindShip : MonoBehaviour
 
     public bool testCamera;
     
-    float delay = 10f;
+    public float delay = 10f;
+    private bool changeOrder;
     
     // Start is called before the first frame update
     void Start()
@@ -57,8 +58,17 @@ public class FindShip : MonoBehaviour
     void PopulateArray()
     {
         AllShips.Clear();
-        AllShips.AddRange(UNSCShips);
-        AllShips.AddRange(CVNTShips);
+        if (changeOrder)
+        {
+            AllShips.AddRange(UNSCShips);
+            AllShips.AddRange(CVNTShips);
+        }
+        else
+        {
+            AllShips.AddRange(CVNTShips);
+            AllShips.AddRange(UNSCShips);
+        }
+       
         arrayNotPopulated = false;
     }
 
@@ -109,6 +119,7 @@ public class FindShip : MonoBehaviour
     IEnumerator NewShip()
     {
         yield return new WaitForSeconds(delay);
+        changeOrder =! changeOrder;
         GetTargetShip();
         testCamera = false;
     }

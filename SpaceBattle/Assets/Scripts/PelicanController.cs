@@ -173,6 +173,7 @@ class PursueState : State
     public override void Exit()
     {
         owner.GetComponent<Pursue>().enabled = false;
+        owner.GetComponent<Shooting>().enabled = false;
         
     }
     
@@ -257,6 +258,7 @@ class FleeState : State
         owner.GetComponent<Flee>().enabled = false;
         //owner.GetComponent<Evade>().enabled = false;
         owner.GetComponent<NoiseWander>().enabled = false;
+        owner.GetComponent<Shooting>().enabled = false;
     }
 }
 
@@ -310,6 +312,25 @@ class ReturnToStart : State
     public override void Exit()
     {
         owner.GetComponent<Seek>().enabled = false;
+        owner.GetComponent<NoiseWander>().enabled = false;
+    }
+}
+
+class Wander : State
+{
+    public override void Enter()
+    {
+        owner.GetComponent<NoiseWander>().enabled = true;
+        owner.GetComponent<SelectTarget>().enabled = false;
+    }
+
+    public override void Think()
+    {
+       
+    }
+    
+    public override void Exit()
+    {
         owner.GetComponent<NoiseWander>().enabled = false;
     }
 }
@@ -421,7 +442,7 @@ public class PelicanController : MonoBehaviour
             //target.GetComponent<PelicanController>().target = target.GetComponent<SelectTarget>().GetNewTarget();
             EnemyRefs.Remove(gameObject);
             Destroy(gameObject);
-            //DESTROY GAMEOBEJCT
+            
         }
     }
     

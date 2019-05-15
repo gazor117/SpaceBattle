@@ -20,6 +20,19 @@ public class ShipManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (UNSCShips.Count <= 0)
+        {
+            foreach (GameObject ship in CVNTShips)
+            {
+                ship.GetComponent<StateMachine>().ChangeState(new Wander());
+            }
+        }
+        if (CVNTShips.Count <= 0)
+        {
+            foreach (GameObject ship in UNSCShips)
+            {
+                ship.GetComponent<StateMachine>().ChangeState(new Wander());
+            }
+        }
     }
 }
