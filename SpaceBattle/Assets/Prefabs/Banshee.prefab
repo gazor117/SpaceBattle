@@ -64,6 +64,7 @@ GameObject:
   - component: {fileID: 2026222114544584078}
   - component: {fileID: 2495358670768991429}
   - component: {fileID: 6507651339853894391}
+  - component: {fileID: 1525640569997794405}
   m_Layer: 0
   m_Name: Banshee
   m_TagString: CVNT
@@ -149,7 +150,6 @@ MonoBehaviour:
   ID: 0
   EnemyRefs: []
   targetBoid: {fileID: 0}
-  EnemyDist: []
 --- !u!114 &65276525576698794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,6 +319,24 @@ CapsuleCollider:
   m_Height: 5.6
   m_Direction: 0
   m_Center: {x: 0.07, y: 1.16, z: -0.79}
+--- !u!114 &1525640569997794405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2287287146866401996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27a013270ce3049468f74b7941f99f11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
+  force: {x: 0, y: 0, z: 0}
+  boid: {fileID: 0}
+  movementSpeed: 20
+  pitchSpeed: 30
+  rollSpeed: 30
 --- !u!1 &2707008265853904404
 GameObject:
   m_ObjectHideFlags: 0

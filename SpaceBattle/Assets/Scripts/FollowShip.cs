@@ -11,7 +11,7 @@ public class FollowShip : MonoBehaviour
 
     public GameObject Waypoint;
     
-    GameObject GameManager;
+    GameObject GM;
     [SerializeField]
     private List<GameObject> ShipRefs;
 
@@ -28,9 +28,10 @@ public class FollowShip : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameManager = GameObject.FindGameObjectWithTag("GM");
+        GM = GameObject.FindGameObjectWithTag("GM");
+        battleBegun = GM.GetComponent<ShipManager>().battleBegun;
         //Chooses which array and spawner to use
-        ShipRefs = UNSCShips ? GameManager.GetComponent<ShipManager>().UNSCShips : GameManager.GetComponent<ShipManager>().CVNTShips;
+        ShipRefs = UNSCShips ? GM.GetComponent<ShipManager>().UNSCShips : GM.GetComponent<ShipManager>().CVNTShips;
         //battleBegun = Waypoint.GetComponent<ShipArrived>().battleBegun;
 
     }
@@ -39,7 +40,7 @@ public class FollowShip : MonoBehaviour
     void Update()
     {
 //        Debug.Log(battleBegun);
-        battleBegun = Waypoint.GetComponent<ShipArrived>().battleBegun;
+        battleBegun = GM.GetComponent<ShipManager>().battleBegun;
         //if all ships are spawned
         
         if (battleBegun)

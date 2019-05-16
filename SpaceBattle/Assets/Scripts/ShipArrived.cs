@@ -7,12 +7,14 @@ public class ShipArrived : MonoBehaviour
     public GameObject UNSCSpawner;
     public GameObject CVNTSpawner;
 
+    private GameObject GM;
 
-    public bool battleBegun;
+
+    //public bool battleBegun;
     // Start is called before the first frame update
     void Start()
     {
-        
+        GM = GameObject.FindWithTag("GM");
     }
 
     // Update is called once per frame
@@ -30,7 +32,7 @@ public class ShipArrived : MonoBehaviour
                 UNSCSpawner.SetActive(true);
                 CVNTSpawner.SetActive(true);
 
-                battleBegun = true;
+                GM.GetComponent<ShipManager>().battleBegun = true;
             }
 
         }

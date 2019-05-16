@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 7522780259486040740}
   - component: {fileID: 6199335120094825882}
   - component: {fileID: 5229883700332354505}
+  - component: {fileID: 4078404267237937338}
   m_Layer: 0
   m_Name: Pelican
   m_TagString: UNSC
@@ -198,7 +199,6 @@ MonoBehaviour:
   ID: 0
   EnemyRefs: []
   targetBoid: {fileID: 0}
-  EnemyDist: []
 --- !u!114 &8638288564837763099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -386,6 +386,24 @@ MonoBehaviour:
   boid: {fileID: 0}
   targetGameObject: {fileID: 0}
   target: {x: 0, y: 0, z: 0}
+--- !u!114 &4078404267237937338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9067207554119265932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27a013270ce3049468f74b7941f99f11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
+  force: {x: 0, y: 0, z: 0}
+  boid: {fileID: 0}
+  movementSpeed: 20
+  pitchSpeed: 30
+  rollSpeed: 30
 --- !u!1001 &9067207553752259927
 PrefabInstance:
   m_ObjectHideFlags: 0

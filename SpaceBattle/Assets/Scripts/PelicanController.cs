@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
+using Cinemachine;
 using UnityEngine;
 using Quaternion = UnityEngine.Quaternion;
 using Vector3 = UnityEngine.Vector3;
@@ -24,9 +25,12 @@ class PursueState : State
     private GameObject tempTarget;
     public override void Enter()
     {
+        
         owner.GetComponent<Pursue>().enabled = true;
         owner.GetComponent<NoiseWander>().enabled = false;
         owner.GetComponent<Seek>().enabled = false;
+        owner.GetComponent<ShipControl>().enabled = false;
+        
         thisMaxSpeed = owner.GetComponent<Boid>().maxSpeed;
         
         
@@ -276,15 +280,9 @@ class SelectTargetState : State
     }
 
     public override void Exit()
-    {
-        
+    {        
         
     }
-    
-    
-    
-    
-    
 }
 
 
@@ -335,8 +333,45 @@ class Wander : State
     }
 }
 
+class PlayerControl : State
+{
+    private GameObject playerCamera;
+    //private Boid boid;
+    //public List<SteeringBehaviour> behaviours = new List<SteeringBehaviour>();
+    private float banking;
+    public override void Enter()
+    {
+        SteeringBehaviour[] behaviours = owner.GetComponents<SteeringBehaviour>();
 
+        foreach (SteeringBehaviour b in behaviours)
+        {
+            if (b.isActiveAndEnabled)
+            {
+                b.enabled = false;
+            }
+        }                 
+        owner.GetComponent<ShipControl>().enabled = true;
+        playerCamera = GameObject.FindWithTag("PlayerCamera");
+        playerCamera.GetComponent<CinemachineVirtualCamera>().Follow = owner.transform;
+        playerCamera.GetComponent<CinemachineVirtualCamera>().LookAt = owner.transform;
+        playerCamera.GetComponent<CinemachineVirtualCamera>().Priority = 11;
+        banking = owner.GetComponent<Boid>().banking;
+        owner.GetComponent<Boid>().banking = 0.1f;
 
+    }   
+
+    public override void Think()
+    {
+        
+    }
+    
+    public override void Exit()
+    {
+        owner.GetComponent<ShipControl>().enabled = false;
+        owner.GetComponent<Boid>().banking = banking;
+
+    }
+}
 
 
 public class PelicanController : MonoBehaviour

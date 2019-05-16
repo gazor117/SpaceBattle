@@ -148,9 +148,6 @@
             </e>
           </e>
         </e>
-        <e p="DestroySelf.cs" t="Include" />
-        <e p="FindShip.cs" t="Include" />
-        <e p="FollowShip.cs" t="Include" />
         <e p="GalaxyBox2" t="Include">
           <e p="instructions.txt" t="Include" />
           <e p="Scripts" t="Include">
@@ -158,15 +155,18 @@
             <e p="MouseLook.cs" t="Include" />
           </e>
         </e>
-        <e p="Laser.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Arrive.cs" t="Include" />
           <e p="BansheeController.cs" t="Include" />
           <e p="Boid.cs" t="Include" />
           <e p="Bullet.cs" t="Include" />
           <e p="CovenantShipSpawning.cs" t="Include" />
+          <e p="DestroySelf.cs" t="Include" />
           <e p="Evade.cs" t="Include" />
+          <e p="FindShip.cs" t="Include" />
           <e p="Flee.cs" t="Include" />
+          <e p="FollowShip.cs" t="Include" />
+          <e p="Laser.cs" t="Include" />
           <e p="NoiseWander.cs" t="Include" />
           <e p="ObstacleAvoidance.cs" t="Include" />
           <e p="OffsetPursue.cs" t="Include" />
@@ -177,6 +177,7 @@
           <e p="Seek.cs" t="Include" />
           <e p="SelectTarget.cs" t="Include" />
           <e p="ShipArrived.cs" t="Include" />
+          <e p="ShipControl.cs" t="Include" />
           <e p="ShipManager.cs" t="Include" />
           <e p="ShipSpawning.cs" t="Include" />
           <e p="Shooting.cs" t="Include" />

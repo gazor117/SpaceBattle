@@ -33,7 +33,7 @@ public class FindShip : MonoBehaviour
     {
         GM = GameObject.FindWithTag("GM");
         
-        battleBegun = Waypoint.GetComponent<ShipArrived>().battleBegun;
+        battleBegun = GM.GetComponent<ShipManager>().battleBegun;
 //        StartCoroutine(CheckBattleStarted());
 
     }
@@ -76,7 +76,7 @@ public class FindShip : MonoBehaviour
     {
         if (arrayNotPopulated)
         {
-            battleBegun = Waypoint.GetComponent<ShipArrived>().battleBegun;
+            battleBegun = GM.GetComponent<ShipManager>().battleBegun;
             CVNTShips = GM.GetComponent<ShipManager>().CVNTShips;
             UNSCShips = GM.GetComponent<ShipManager>().UNSCShips;
             if (battleBegun)
