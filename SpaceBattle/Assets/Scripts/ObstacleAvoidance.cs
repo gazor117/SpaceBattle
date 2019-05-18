@@ -58,12 +58,12 @@ public class ObstacleAvoidance : SteeringBehaviour
     {
         force = Vector3.zero;
 
-        for (int i = 0; i < feelers.Length; i++)
+        for (int i = 0; i < feelers.Length; i++)            //Loop through array of feelerInfo
         {
             FeelerInfo info = feelers[i];
-            if (info.collided)
+            if (info.collided)                            //if feeler has collided with something on the correct layer mask
             {
-                force += CalculateSceneAvoidanceForce(info);
+                force += CalculateSceneAvoidanceForce(info);                //Run this
             }
         }
         return force;
@@ -71,13 +71,13 @@ public class ObstacleAvoidance : SteeringBehaviour
 
     void UpdateFeeler(int feelerNum, Quaternion localRotation, float baseDepth, FeelerInfo.FeeelerType feelerType)
     {
-        Vector3 direction = localRotation * transform.rotation * Vector3.forward;
-        float depth = baseDepth + ((boid.velocity.magnitude / boid.maxSpeed) * baseDepth);
+        Vector3 direction = localRotation * transform.rotation * Vector3.forward;                    //When you multiply a vector by a quaternion you apply the quaternions rotation to that vector
+        float depth = baseDepth + ((boid.velocity.magnitude / boid.maxSpeed) * baseDepth);            //Alters base depth based on speed of ship, if speed = maxSpeed depth = baseDepth
 
         RaycastHit info;
-        bool collided = Physics.SphereCast(transform.position, feelerRadius, direction, out info, depth, mask.value);
-        Vector3 feelerEnd = collided ? info.point : (transform.position + direction * depth);
-        feelers[feelerNum] = new FeelerInfo(feelerEnd, info.normal
+        bool collided = Physics.SphereCast(transform.position, feelerRadius, direction, out info, depth, mask.value);            
+        Vector3 feelerEnd = collided ? info.point : (transform.position + direction * depth);        //if collided is true the feelerEnd is where the ray hit, else it is the direction as far as depth
+        feelers[feelerNum] = new FeelerInfo(feelerEnd, info.normal                                    //Update the feelerInfo for this feeler with, the feelerEnd, the normal of the object it hit, whether it collided and the feelertype
             , collided, feelerType);
     }
 
@@ -115,22 +115,22 @@ public class ObstacleAvoidance : SteeringBehaviour
     {
         Vector3 force = Vector3.zero;
 
-        Vector3 fromTarget = fromTarget = transform.position - info.point;
-        float dist = Vector3.Distance(transform.position, info.point);
+        Vector3 fromTarget = fromTarget = transform.position - info.point;                //Get the direction from hitPoint to Ship
+        float dist = Vector3.Distance(transform.position, info.point);                    //Get distance
 
-        switch (forceType)
+        switch (forceType)                                //switch statement based on which forceType is chosen in editor
         {
             case ForceType.normal:
-                force = info.normal * (forwardFeelerDepth * scale / dist);
-                break;
+                force = info.normal * (forwardFeelerDepth * scale / dist);   //the normal (perpendicular direction of the plane hit) direction is multiplied by the (depth by the scale, divided by the distance). 
+                break;                                                        //This means the smaller the distance the greater the force will be
             case ForceType.incident:
-                fromTarget.Normalize();
-                force -= Vector3.Reflect(fromTarget, info.normal) * (forwardFeelerDepth / dist);
+                fromTarget.Normalize();                        //direction from hitPoint to ship
+                force -= Vector3.Reflect(fromTarget, info.normal) * (forwardFeelerDepth / dist);          //gets a reflection force, as if ship was a ray of light
                 break;
-            case ForceType.up:
+            case ForceType.up:                                //gets an up force
                 force += Vector3.up * (forwardFeelerDepth * scale / dist);
                 break;
-            case ForceType.braking:
+            case ForceType.braking:                            //gets a force opposite of the current direction of thge ship
                 force += fromTarget * (forwardFeelerDepth / dist);
                 break;
         }
